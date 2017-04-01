@@ -41,8 +41,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tbl_ChiDoan.cs" />
     <Compile Include="tbl_DanToc.cs" />
+    <Compile Include="tbl_KhoaHoc.cs" />
     <Compile Include="tbl_NguoiDung.cs" />
+    <Compile Include="tbl_SinhVien.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

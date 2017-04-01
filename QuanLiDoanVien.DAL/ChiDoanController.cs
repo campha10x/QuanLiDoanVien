@@ -8,14 +8,14 @@ using System.Data.SqlClient;
 using QuanLiDoanVien.Entity;
 namespace QuanLiDoanVien.DAL
 {
-   public class DanTocDAL:SqlDataProvider
+    public class ChiDoanDAL:SqlDataProvider
     {
-        public List<tbl_DanToc> DanToc_GetByTop(string Top, string Where, string Order)
+        public List<tbl_ChiDoan> ChiDoanGetByTop(string Top, string Where, string Order)
         {
-            List<tbl_DanToc> list = new List<tbl_DanToc>();
-            using (SqlCommand dbCmd = new SqlCommand("sp_DanToc_getByTop", GetConection()))
+            List<tbl_ChiDoan> list = new List<tbl_ChiDoan>();
+            using (SqlCommand dbCmd = new SqlCommand("sp_ChiDoan_getByTop", GetConection()))
             {
-                tbl_DanToc obj = new tbl_DanToc();
+                tbl_ChiDoan obj = new tbl_ChiDoan();
                 dbCmd.CommandType = CommandType.StoredProcedure;
                 dbCmd.Parameters.Add(new SqlParameter("@Top", Top));
                 dbCmd.Parameters.Add(new SqlParameter("@Where", Where));
@@ -25,7 +25,7 @@ namespace QuanLiDoanVien.DAL
                 {
                     while (dr.Read())
                     {
-                        list.Add(obj.tbl_DanTocIDataReader(dr));
+                        list.Add(obj.ChiDoanIDataReader(dr));
                     }
                 }
                 dr.Close();
@@ -33,14 +33,15 @@ namespace QuanLiDoanVien.DAL
             }
             return list;
         }
-        public bool DanToc_Insert(tbl_DanToc data)
+        public bool ChiDoan_Insert(tbl_ChiDoan data)
         {
             try
             {
-                using (SqlCommand dbCmd = new SqlCommand("sp_DanToc_Insert", GetConection()))
+                using (SqlCommand dbCmd = new SqlCommand("sp_ChiDoan_Insert", GetConection()))
                 {
                     dbCmd.CommandType = CommandType.StoredProcedure;
-                    dbCmd.Parameters.Add("@TenDT", data.TenDT);
+                    dbCmd.Parameters.Add("@TenChiDoan", data.TenChiDoan);
+                    dbCmd.Parameters.Add("@MaKhoaHoc", data.MaKhoaHoc);
                     dbCmd.ExecuteNonQuery();
 
                 }
@@ -51,15 +52,16 @@ namespace QuanLiDoanVien.DAL
                 return false;
             }
         }
-        public bool DanToc_Update(tbl_DanToc data)
+        public bool ChiDoan_Update(tbl_ChiDoan data)
         {
             try
             {
-                using (SqlCommand dbCmd = new SqlCommand("sp_DanToc_Update", GetConection()))
+                using (SqlCommand dbCmd = new SqlCommand("sp_ChiDoan_Update", GetConection()))
                 {
                     dbCmd.CommandType = CommandType.StoredProcedure;
-                    dbCmd.Parameters.Add("@MaDT", data.MaDT);
-                    dbCmd.Parameters.Add("@TenDT", data.TenDT);
+                    dbCmd.Parameters.Add("@MaChiDoan", data.MaChiDoan);
+                    dbCmd.Parameters.Add("@TenChiDoan", data.TenChiDoan);
+                    dbCmd.Parameters.Add("@MaKhoaHoc", data.MaKhoaHoc);
                     dbCmd.ExecuteNonQuery();
 
                 }
@@ -71,14 +73,14 @@ namespace QuanLiDoanVien.DAL
             }
         }
 
-        public bool DanToc_Delete(tbl_DanToc data)
+        public bool ChiDoan_Delete(tbl_ChiDoan data)
         {
             try
             {
-                using (SqlCommand dbCmd = new SqlCommand("sp_DanToc_Delete", GetConection()))
+                using (SqlCommand dbCmd = new SqlCommand("sp_ChiDoan_Delete", GetConection()))
                 {
                     dbCmd.CommandType = CommandType.StoredProcedure;
-                    dbCmd.Parameters.Add("@MaDT", data.MaDT);
+                    dbCmd.Parameters.Add("@MaChiDoan", data.MaChiDoan);
                     dbCmd.ExecuteNonQuery();
 
                 }

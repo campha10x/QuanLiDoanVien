@@ -40,7 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChiDoanController.cs" />
     <Compile Include="DanTocController.cs" />
+    <Compile Include="KhoaHocController.cs" />
     <Compile Include="NguoiDungController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
@@ -48,6 +50,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="SinhVienController.cs" />
     <Compile Include="SqlDataProvider.cs" />
   </ItemGroup>
   <ItemGroup>

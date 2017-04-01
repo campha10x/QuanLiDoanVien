@@ -51,6 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmChiDoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChiDoan.Designer.cs">
+      <DependentUpon>frmChiDoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDMDanToc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,8 +75,26 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSinhVien.Designer.cs">
+      <DependentUpon>frmSinhVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UCBaoCaoTinhTrang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCBaoCaoTinhTrang.Designer.cs">
+      <DependentUpon>UCBaoCaoTinhTrang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCQuanLiDoanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCQuanLiDoanVien.Designer.cs">
+      <DependentUpon>UCQuanLiDoanVien.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmDMDanToc.resx">
       <DependentUpon>frmDMDanToc.cs</DependentUpon>
     </EmbeddedResource>
@@ -79,6 +103,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSinhVien.resx">
+      <DependentUpon>frmSinhVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -89,6 +116,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UCBaoCaoTinhTrang.resx">
+      <DependentUpon>UCBaoCaoTinhTrang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCQuanLiDoanVien.resx">
+      <DependentUpon>UCQuanLiDoanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

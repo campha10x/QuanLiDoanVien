@@ -29,10 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDMDanToc));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dtgrvDanToc = new System.Windows.Forms.DataGridView();
-            this.madt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnthem = new System.Windows.Forms.Button();
             this.btnsua = new System.Windows.Forms.Button();
@@ -44,9 +42,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtmadt = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.dtgrvDanToc = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.madt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgrvDanToc)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgrvDanToc)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -57,36 +58,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(663, 230);
             this.panel1.TabIndex = 0;
-            // 
-            // dtgrvDanToc
-            // 
-            this.dtgrvDanToc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgrvDanToc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.madt,
-            this.tenDT});
-            this.dtgrvDanToc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtgrvDanToc.Location = new System.Drawing.Point(0, 0);
-            this.dtgrvDanToc.Name = "dtgrvDanToc";
-            this.dtgrvDanToc.ReadOnly = true;
-            this.dtgrvDanToc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgrvDanToc.Size = new System.Drawing.Size(663, 230);
-            this.dtgrvDanToc.TabIndex = 0;
-            // 
-            // madt
-            // 
-            this.madt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.madt.DataPropertyName = "MaDT";
-            this.madt.HeaderText = "Mã dân tộc";
-            this.madt.Name = "madt";
-            this.madt.ReadOnly = true;
-            // 
-            // tenDT
-            // 
-            this.tenDT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tenDT.DataPropertyName = "TenDT";
-            this.tenDT.HeaderText = "Tên Dân Tộc";
-            this.tenDT.Name = "tenDT";
-            this.tenDT.ReadOnly = true;
             // 
             // groupBox1
             // 
@@ -133,6 +104,7 @@
             this.btnsua.Text = "Sửa";
             this.btnsua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnsua.UseVisualStyleBackColor = true;
+            this.btnsua.Click += new System.EventHandler(this.btnsua_Click);
             // 
             // btnxoa
             // 
@@ -145,6 +117,7 @@
             this.btnxoa.Text = "Xóa";
             this.btnxoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnxoa.UseVisualStyleBackColor = true;
+            this.btnxoa.Click += new System.EventHandler(this.btnxoa_Click);
             // 
             // btnluu
             // 
@@ -157,6 +130,7 @@
             this.btnluu.Text = "Lưu";
             this.btnluu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnluu.UseVisualStyleBackColor = true;
+            this.btnluu.Click += new System.EventHandler(this.btnluu_Click);
             // 
             // btnhuy
             // 
@@ -169,6 +143,7 @@
             this.btnhuy.Text = "Hủy";
             this.btnhuy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnhuy.UseVisualStyleBackColor = true;
+            this.btnhuy.Click += new System.EventHandler(this.btnhuy_Click);
             // 
             // btnHome
             // 
@@ -181,6 +156,7 @@
             this.btnHome.Text = "Home";
             this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // txttendt
             // 
@@ -214,6 +190,45 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã dân tộc";
             // 
+            // dtgrvDanToc
+            // 
+            this.dtgrvDanToc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgrvDanToc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.madt,
+            this.tenDT});
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgrvDanToc.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgrvDanToc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgrvDanToc.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.dtgrvDanToc.Location = new System.Drawing.Point(0, 0);
+            this.dtgrvDanToc.Name = "dtgrvDanToc";
+            this.dtgrvDanToc.ReadOnly = true;
+            this.dtgrvDanToc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgrvDanToc.Size = new System.Drawing.Size(663, 230);
+            this.dtgrvDanToc.TabIndex = 1;
+            // 
+            // madt
+            // 
+            this.madt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.madt.DataPropertyName = "MaDT";
+            this.madt.HeaderText = "Mã dân tộc";
+            this.madt.Name = "madt";
+            this.madt.ReadOnly = true;
+            // 
+            // tenDT
+            // 
+            this.tenDT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tenDT.DataPropertyName = "TenDT";
+            this.tenDT.HeaderText = "Tên dân tộc";
+            this.tenDT.Name = "tenDT";
+            this.tenDT.ReadOnly = true;
+            // 
             // frmDMDanToc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -228,9 +243,9 @@
             this.Text = "frmDMDanToc";
             this.Load += new System.EventHandler(this.frmDMDanToc_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgrvDanToc)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgrvDanToc)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -238,7 +253,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dtgrvDanToc;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnthem;
         private System.Windows.Forms.Button btnsua;
@@ -250,6 +264,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtmadt;
         private System.Windows.Forms.Label label1;
+        private DevComponents.DotNetBar.Controls.DataGridViewX dtgrvDanToc;
         private System.Windows.Forms.DataGridViewTextBoxColumn madt;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenDT;
     }
