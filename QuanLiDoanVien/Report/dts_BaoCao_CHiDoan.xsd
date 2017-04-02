@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dts_BaoCao_CHiDoan" targetNamespace="http://tempuri.org/dts_BaoCao_CHiDoan.xsd" xmlns:mstns="http://tempuri.org/dts_BaoCao_CHiDoan.xsd" xmlns="http://tempuri.org/dts_BaoCao_CHiDoan.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="QuanLiDoanVienConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="QuanLiDoanVienConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.QuanLiDoanVien.Properties.Settings.GlobalReference.Default.QuanLiDoanVienConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tbl_SINHVIENTableAdapter" GeneratorDataComponentClassName="tbl_SINHVIENTableAdapter" Name="tbl_SINHVIEN" UserDataComponentName="tbl_SINHVIENTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="QuanLiDoanVienConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        tbl_SINHVIEN.HoTenSV, tbl_SINHVIEN.NgaySinh, tbl_SINHVIEN.TinhTrang, tbl_SINHVIEN.DienThoai, tbl_ChiDoan.TenChiDoan
+FROM            tbl_SINHVIEN INNER JOIN
+                         tbl_ChiDoan ON tbl_SINHVIEN.MaChiDoan = tbl_ChiDoan.MaChiDoan
+GROUP BY tbl_ChiDoan.MaChiDoan, tbl_SINHVIEN.HoTenSV, tbl_SINHVIEN.NgaySinh, tbl_SINHVIEN.TinhTrang, tbl_SINHVIEN.DienThoai, tbl_ChiDoan.TenChiDoan</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="HoTenSV" DataSetColumn="HoTenSV" />
+              <Mapping SourceColumn="NgaySinh" DataSetColumn="NgaySinh" />
+              <Mapping SourceColumn="TinhTrang" DataSetColumn="TinhTrang" />
+              <Mapping SourceColumn="DienThoai" DataSetColumn="DienThoai" />
+              <Mapping SourceColumn="TenChiDoan" DataSetColumn="TenChiDoan" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dts_BaoCao_CHiDoan" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dts_BaoCao_CHiDoan" msprop:Generator_UserDSName="dts_BaoCao_CHiDoan">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tbl_SINHVIEN" msprop:Generator_TableClassName="tbl_SINHVIENDataTable" msprop:Generator_TableVarName="tabletbl_SINHVIEN" msprop:Generator_TablePropName="tbl_SINHVIEN" msprop:Generator_RowDeletingName="tbl_SINHVIENRowDeleting" msprop:Generator_RowChangingName="tbl_SINHVIENRowChanging" msprop:Generator_RowEvHandlerName="tbl_SINHVIENRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_SINHVIENRowDeleted" msprop:Generator_UserTableName="tbl_SINHVIEN" msprop:Generator_RowChangedName="tbl_SINHVIENRowChanged" msprop:Generator_RowEvArgName="tbl_SINHVIENRowChangeEvent" msprop:Generator_RowClassName="tbl_SINHVIENRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="HoTenSV" msprop:Generator_ColumnVarNameInTable="columnHoTenSV" msprop:Generator_ColumnPropNameInRow="HoTenSV" msprop:Generator_ColumnPropNameInTable="HoTenSVColumn" msprop:Generator_UserColumnName="HoTenSV" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NgaySinh" msprop:Generator_ColumnVarNameInTable="columnNgaySinh" msprop:Generator_ColumnPropNameInRow="NgaySinh" msprop:Generator_ColumnPropNameInTable="NgaySinhColumn" msprop:Generator_UserColumnName="NgaySinh" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TinhTrang" msprop:Generator_ColumnVarNameInTable="columnTinhTrang" msprop:Generator_ColumnPropNameInRow="TinhTrang" msprop:Generator_ColumnPropNameInTable="TinhTrangColumn" msprop:Generator_UserColumnName="TinhTrang" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DienThoai" msprop:Generator_ColumnVarNameInTable="columnDienThoai" msprop:Generator_ColumnPropNameInRow="DienThoai" msprop:Generator_ColumnPropNameInTable="DienThoaiColumn" msprop:Generator_UserColumnName="DienThoai" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TenChiDoan" msprop:Generator_ColumnVarNameInTable="columnTenChiDoan" msprop:Generator_ColumnPropNameInRow="TenChiDoan" msprop:Generator_ColumnPropNameInTable="TenChiDoanColumn" msprop:Generator_UserColumnName="TenChiDoan" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -26,7 +26,8 @@ namespace QuanLiDoanVien
                 return;
             }
             List<Entity.tbl_NguoiDung> lst = new List<Entity.tbl_NguoiDung>();
-            lst = NguoiDungService.NguoiDungGetByTop("", " TenDangNhap='" + txttaikhoan.Text + "' AND MatKhau='" + txtmatkhau.Text + "'", "");
+            
+            lst = NguoiDungService.NguoiDungGetByTop("", " TenDangNhap='" + txttaikhoan.Text + "' AND MatKhau='" + EncryptorMD5.MD5Hash(txtmatkhau.Text) + "'", "");
             if (lst.Count == 0)
             {
                 MessageBox.Show("Bạn đã đăng nhập sai", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

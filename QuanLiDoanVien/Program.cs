@@ -16,7 +16,7 @@ namespace QuanLiDoanVien
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmHeThong());
+            Application.Run(new frmLogin());
         }
     }
 }

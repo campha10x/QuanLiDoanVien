@@ -121,5 +121,11 @@ namespace QuanLiDoanVien
             UCBaoCaoTinhTrang ucBCTT = new UCBaoCaoTinhTrang();
             addNewTab("Báo cáo đoàn viên,thanh niên theo tình trạng ",ucBCTT);
         }
+
+        private void buttonItem22_Click(object sender, EventArgs e)
+        {
+            UC_BC_ChiDoan ucBCTT = new UC_BC_ChiDoan();
+            addNewTab("Báo cáo đoàn viên theo chi đoàn", ucBCTT);
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace QuanLiDoanVien
 {
-    partial class UCBaoCaoTinhTrang
+    partial class UC_BC_ChiDoan
     {
         /// <summary> 
         /// Required designer variable.
@@ -34,13 +34,6 @@
             this.dockSite1 = new DevComponents.DotNetBar.DockSite();
             this.bar1 = new DevComponents.DotNetBar.Bar();
             this.panelDockContainer1 = new DevComponents.DotNetBar.PanelDockContainer();
-            this.btnreset = new DevComponents.DotNetBar.ButtonX();
-            this.btnsubmit = new DevComponents.DotNetBar.ButtonX();
-            this.cbbkhoahoc = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.labelX3 = new DevComponents.DotNetBar.LabelX();
-            this.cbbchidoan = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.labelX2 = new DevComponents.DotNetBar.LabelX();
-            this.cbbtinhtrang = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.dockContainerItem1 = new DevComponents.DotNetBar.DockContainerItem();
             this.dockSite2 = new DevComponents.DotNetBar.DockSite();
@@ -49,8 +42,11 @@
             this.dockSite6 = new DevComponents.DotNetBar.DockSite();
             this.dockSite7 = new DevComponents.DotNetBar.DockSite();
             this.dockSite3 = new DevComponents.DotNetBar.DockSite();
-            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.crpt_TinhTrang1 = new QuanLiDoanVien.Report.crpt_TinhTrang();
+            this.cbbChiDoan = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
+            this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
+            this.crpt_BaoCao_ChiDoan = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.crpt_BaoCao_ChiDoan1 = new QuanLiDoanVien.Report.crpt_BaoCao_ChiDoan();
             this.dockSite1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
             this.bar1.SuspendLayout();
@@ -86,9 +82,9 @@
             this.dockSite4.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.dockSite4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dockSite4.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
-            this.dockSite4.Location = new System.Drawing.Point(0, 448);
+            this.dockSite4.Location = new System.Drawing.Point(0, 474);
             this.dockSite4.Name = "dockSite4";
-            this.dockSite4.Size = new System.Drawing.Size(721, 0);
+            this.dockSite4.Size = new System.Drawing.Size(730, 0);
             this.dockSite4.TabIndex = 3;
             this.dockSite4.TabStop = false;
             // 
@@ -98,10 +94,10 @@
             this.dockSite1.Controls.Add(this.bar1);
             this.dockSite1.Dock = System.Windows.Forms.DockStyle.Left;
             this.dockSite1.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer(new DevComponents.DotNetBar.DocumentBaseContainer[] {
-            ((DevComponents.DotNetBar.DocumentBaseContainer)(new DevComponents.DotNetBar.DocumentBarContainer(this.bar1, 232, 448)))}, DevComponents.DotNetBar.eOrientation.Horizontal);
+            ((DevComponents.DotNetBar.DocumentBaseContainer)(new DevComponents.DotNetBar.DocumentBarContainer(this.bar1, 209, 474)))}, DevComponents.DotNetBar.eOrientation.Horizontal);
             this.dockSite1.Location = new System.Drawing.Point(0, 0);
             this.dockSite1.Name = "dockSite1";
-            this.dockSite1.Size = new System.Drawing.Size(235, 448);
+            this.dockSite1.Size = new System.Drawing.Size(212, 474);
             this.dockSite1.TabIndex = 0;
             this.dockSite1.TabStop = false;
             // 
@@ -120,118 +116,29 @@
             this.bar1.LayoutType = DevComponents.DotNetBar.eLayoutType.DockContainer;
             this.bar1.Location = new System.Drawing.Point(0, 0);
             this.bar1.Name = "bar1";
-            this.bar1.Size = new System.Drawing.Size(232, 448);
+            this.bar1.Size = new System.Drawing.Size(209, 474);
             this.bar1.Stretch = true;
             this.bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
             this.bar1.TabIndex = 0;
             this.bar1.TabStop = false;
-            this.bar1.Text = "Parameters";
+            this.bar1.Text = "dockContainerItem1";
+            this.bar1.ItemClick += new System.EventHandler(this.bar1_ItemClick);
             // 
             // panelDockContainer1
             // 
-            this.panelDockContainer1.Controls.Add(this.btnreset);
-            this.panelDockContainer1.Controls.Add(this.btnsubmit);
-            this.panelDockContainer1.Controls.Add(this.cbbkhoahoc);
-            this.panelDockContainer1.Controls.Add(this.labelX3);
-            this.panelDockContainer1.Controls.Add(this.cbbchidoan);
-            this.panelDockContainer1.Controls.Add(this.labelX2);
-            this.panelDockContainer1.Controls.Add(this.cbbtinhtrang);
+            this.panelDockContainer1.Controls.Add(this.buttonX2);
+            this.panelDockContainer1.Controls.Add(this.buttonX1);
+            this.panelDockContainer1.Controls.Add(this.cbbChiDoan);
             this.panelDockContainer1.Controls.Add(this.labelX1);
             this.panelDockContainer1.Location = new System.Drawing.Point(3, 23);
             this.panelDockContainer1.Name = "panelDockContainer1";
-            this.panelDockContainer1.Size = new System.Drawing.Size(226, 422);
+            this.panelDockContainer1.Size = new System.Drawing.Size(203, 448);
             this.panelDockContainer1.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panelDockContainer1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
             this.panelDockContainer1.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
             this.panelDockContainer1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText;
             this.panelDockContainer1.Style.GradientAngle = 90;
             this.panelDockContainer1.TabIndex = 0;
-            this.panelDockContainer1.Click += new System.EventHandler(this.panelDockContainer1_Click);
-            // 
-            // btnreset
-            // 
-            this.btnreset.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnreset.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnreset.Location = new System.Drawing.Point(32, 178);
-            this.btnreset.Name = "btnreset";
-            this.btnreset.Size = new System.Drawing.Size(75, 23);
-            this.btnreset.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnreset.TabIndex = 7;
-            this.btnreset.Text = "Reset";
-            // 
-            // btnsubmit
-            // 
-            this.btnsubmit.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnsubmit.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnsubmit.Location = new System.Drawing.Point(113, 178);
-            this.btnsubmit.Name = "btnsubmit";
-            this.btnsubmit.Size = new System.Drawing.Size(75, 23);
-            this.btnsubmit.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnsubmit.TabIndex = 6;
-            this.btnsubmit.Text = "Submit";
-            this.btnsubmit.Click += new System.EventHandler(this.btnsubmit_Click);
-            // 
-            // cbbkhoahoc
-            // 
-            this.cbbkhoahoc.DisplayMember = "Text";
-            this.cbbkhoahoc.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbbkhoahoc.FormattingEnabled = true;
-            this.cbbkhoahoc.ItemHeight = 17;
-            this.cbbkhoahoc.Location = new System.Drawing.Point(86, 113);
-            this.cbbkhoahoc.Name = "cbbkhoahoc";
-            this.cbbkhoahoc.Size = new System.Drawing.Size(121, 23);
-            this.cbbkhoahoc.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cbbkhoahoc.TabIndex = 5;
-            // 
-            // labelX3
-            // 
-            // 
-            // 
-            // 
-            this.labelX3.BackgroundStyle.Class = "";
-            this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX3.Location = new System.Drawing.Point(4, 113);
-            this.labelX3.Name = "labelX3";
-            this.labelX3.Size = new System.Drawing.Size(75, 23);
-            this.labelX3.TabIndex = 4;
-            this.labelX3.Text = "Khóa học";
-            // 
-            // cbbchidoan
-            // 
-            this.cbbchidoan.DisplayMember = "Text";
-            this.cbbchidoan.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbbchidoan.FormattingEnabled = true;
-            this.cbbchidoan.ItemHeight = 17;
-            this.cbbchidoan.Location = new System.Drawing.Point(86, 72);
-            this.cbbchidoan.Name = "cbbchidoan";
-            this.cbbchidoan.Size = new System.Drawing.Size(121, 23);
-            this.cbbchidoan.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cbbchidoan.TabIndex = 3;
-            // 
-            // labelX2
-            // 
-            // 
-            // 
-            // 
-            this.labelX2.BackgroundStyle.Class = "";
-            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Location = new System.Drawing.Point(4, 72);
-            this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(75, 23);
-            this.labelX2.TabIndex = 2;
-            this.labelX2.Text = "Chi đoàn";
-            // 
-            // cbbtinhtrang
-            // 
-            this.cbbtinhtrang.DisplayMember = "Text";
-            this.cbbtinhtrang.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbbtinhtrang.FormattingEnabled = true;
-            this.cbbtinhtrang.ItemHeight = 17;
-            this.cbbtinhtrang.Location = new System.Drawing.Point(86, 31);
-            this.cbbtinhtrang.Name = "cbbtinhtrang";
-            this.cbbtinhtrang.Size = new System.Drawing.Size(121, 23);
-            this.cbbtinhtrang.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cbbtinhtrang.TabIndex = 1;
             // 
             // labelX1
             // 
@@ -240,11 +147,11 @@
             // 
             this.labelX1.BackgroundStyle.Class = "";
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Location = new System.Drawing.Point(4, 31);
+            this.labelX1.Location = new System.Drawing.Point(4, 34);
             this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(75, 23);
+            this.labelX1.Size = new System.Drawing.Size(60, 23);
             this.labelX1.TabIndex = 0;
-            this.labelX1.Text = "Tình trạng";
+            this.labelX1.Text = "Chi đoàn";
             // 
             // dockContainerItem1
             // 
@@ -257,9 +164,9 @@
             this.dockSite2.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.dockSite2.Dock = System.Windows.Forms.DockStyle.Right;
             this.dockSite2.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
-            this.dockSite2.Location = new System.Drawing.Point(721, 0);
+            this.dockSite2.Location = new System.Drawing.Point(730, 0);
             this.dockSite2.Name = "dockSite2";
-            this.dockSite2.Size = new System.Drawing.Size(0, 448);
+            this.dockSite2.Size = new System.Drawing.Size(0, 474);
             this.dockSite2.TabIndex = 1;
             this.dockSite2.TabStop = false;
             // 
@@ -267,9 +174,9 @@
             // 
             this.dockSite8.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.dockSite8.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dockSite8.Location = new System.Drawing.Point(0, 448);
+            this.dockSite8.Location = new System.Drawing.Point(0, 474);
             this.dockSite8.Name = "dockSite8";
-            this.dockSite8.Size = new System.Drawing.Size(721, 0);
+            this.dockSite8.Size = new System.Drawing.Size(730, 0);
             this.dockSite8.TabIndex = 7;
             this.dockSite8.TabStop = false;
             // 
@@ -279,7 +186,7 @@
             this.dockSite5.Dock = System.Windows.Forms.DockStyle.Left;
             this.dockSite5.Location = new System.Drawing.Point(0, 0);
             this.dockSite5.Name = "dockSite5";
-            this.dockSite5.Size = new System.Drawing.Size(0, 448);
+            this.dockSite5.Size = new System.Drawing.Size(0, 474);
             this.dockSite5.TabIndex = 4;
             this.dockSite5.TabStop = false;
             // 
@@ -287,9 +194,9 @@
             // 
             this.dockSite6.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.dockSite6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dockSite6.Location = new System.Drawing.Point(721, 0);
+            this.dockSite6.Location = new System.Drawing.Point(730, 0);
             this.dockSite6.Name = "dockSite6";
-            this.dockSite6.Size = new System.Drawing.Size(0, 448);
+            this.dockSite6.Size = new System.Drawing.Size(0, 474);
             this.dockSite6.TabIndex = 5;
             this.dockSite6.TabStop = false;
             // 
@@ -299,7 +206,7 @@
             this.dockSite7.Dock = System.Windows.Forms.DockStyle.Top;
             this.dockSite7.Location = new System.Drawing.Point(0, 0);
             this.dockSite7.Name = "dockSite7";
-            this.dockSite7.Size = new System.Drawing.Size(721, 0);
+            this.dockSite7.Size = new System.Drawing.Size(730, 0);
             this.dockSite7.TabIndex = 6;
             this.dockSite7.TabStop = false;
             // 
@@ -310,28 +217,64 @@
             this.dockSite3.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
             this.dockSite3.Location = new System.Drawing.Point(0, 0);
             this.dockSite3.Name = "dockSite3";
-            this.dockSite3.Size = new System.Drawing.Size(721, 0);
+            this.dockSite3.Size = new System.Drawing.Size(730, 0);
             this.dockSite3.TabIndex = 2;
             this.dockSite3.TabStop = false;
             // 
-            // crystalReportViewer1
+            // cbbChiDoan
             // 
-            this.crystalReportViewer1.ActiveViewIndex = 0;
-            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.crystalReportViewer1.Location = new System.Drawing.Point(235, 0);
-            this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.ReportSource = this.crpt_TinhTrang1;
-            this.crystalReportViewer1.Size = new System.Drawing.Size(486, 448);
-            this.crystalReportViewer1.TabIndex = 8;
-            this.crystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
+            this.cbbChiDoan.DisplayMember = "Text";
+            this.cbbChiDoan.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbChiDoan.FormattingEnabled = true;
+            this.cbbChiDoan.ItemHeight = 17;
+            this.cbbChiDoan.Location = new System.Drawing.Point(70, 34);
+            this.cbbChiDoan.Name = "cbbChiDoan";
+            this.cbbChiDoan.Size = new System.Drawing.Size(121, 23);
+            this.cbbChiDoan.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cbbChiDoan.TabIndex = 1;
             // 
-            // UCBaoCaoTinhTrang
+            // buttonX1
+            // 
+            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX1.Location = new System.Drawing.Point(126, 93);
+            this.buttonX1.Name = "buttonX1";
+            this.buttonX1.Size = new System.Drawing.Size(65, 33);
+            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX1.TabIndex = 4;
+            this.buttonX1.Text = "Submit";
+            this.buttonX1.Click += new System.EventHandler(this.buttonX1_Click);
+            // 
+            // buttonX2
+            // 
+            this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX2.Location = new System.Drawing.Point(46, 93);
+            this.buttonX2.Name = "buttonX2";
+            this.buttonX2.Size = new System.Drawing.Size(62, 33);
+            this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX2.TabIndex = 5;
+            this.buttonX2.Text = "Reset";
+            // 
+            // crpt_BaoCao_ChiDoan
+            // 
+            this.crpt_BaoCao_ChiDoan.ActiveViewIndex = 0;
+            this.crpt_BaoCao_ChiDoan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crpt_BaoCao_ChiDoan.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crpt_BaoCao_ChiDoan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.crpt_BaoCao_ChiDoan.Location = new System.Drawing.Point(212, 0);
+            this.crpt_BaoCao_ChiDoan.Name = "crpt_BaoCao_ChiDoan";
+            this.crpt_BaoCao_ChiDoan.ReportSource = this.crpt_BaoCao_ChiDoan1;
+            this.crpt_BaoCao_ChiDoan.Size = new System.Drawing.Size(518, 474);
+            this.crpt_BaoCao_ChiDoan.TabIndex = 8;
+            this.crpt_BaoCao_ChiDoan.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
+            this.crpt_BaoCao_ChiDoan.Load += new System.EventHandler(this.crpt_BaoCao_ChiDoan_Load);
+            // 
+            // UC_BC_ChiDoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.crystalReportViewer1);
+            this.Controls.Add(this.crpt_BaoCao_ChiDoan);
             this.Controls.Add(this.dockSite2);
             this.Controls.Add(this.dockSite1);
             this.Controls.Add(this.dockSite3);
@@ -342,9 +285,9 @@
             this.Controls.Add(this.dockSite8);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "UCBaoCaoTinhTrang";
-            this.Size = new System.Drawing.Size(721, 448);
-            this.Load += new System.EventHandler(this.UCBaoCaoTinhTrang_Load);
+            this.Name = "UC_BC_ChiDoan";
+            this.Size = new System.Drawing.Size(730, 474);
+            this.Load += new System.EventHandler(this.UC_BC_ChiDoan_Load);
             this.dockSite1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).EndInit();
             this.bar1.ResumeLayout(false);
@@ -360,6 +303,7 @@
         private DevComponents.DotNetBar.DockSite dockSite1;
         private DevComponents.DotNetBar.Bar bar1;
         private DevComponents.DotNetBar.PanelDockContainer panelDockContainer1;
+        private DevComponents.DotNetBar.LabelX labelX1;
         private DevComponents.DotNetBar.DockContainerItem dockContainerItem1;
         private DevComponents.DotNetBar.DockSite dockSite2;
         private DevComponents.DotNetBar.DockSite dockSite3;
@@ -367,15 +311,10 @@
         private DevComponents.DotNetBar.DockSite dockSite6;
         private DevComponents.DotNetBar.DockSite dockSite7;
         private DevComponents.DotNetBar.DockSite dockSite8;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx cbbkhoahoc;
-        private DevComponents.DotNetBar.LabelX labelX3;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx cbbchidoan;
-        private DevComponents.DotNetBar.LabelX labelX2;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx cbbtinhtrang;
-        private DevComponents.DotNetBar.LabelX labelX1;
-        private DevComponents.DotNetBar.ButtonX btnreset;
-        private DevComponents.DotNetBar.ButtonX btnsubmit;
-        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
-        private Report.crpt_TinhTrang crpt_TinhTrang1;
+        private DevComponents.DotNetBar.ButtonX buttonX2;
+        private DevComponents.DotNetBar.ButtonX buttonX1;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx cbbChiDoan;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crpt_BaoCao_ChiDoan;
+        private Report.crpt_BaoCao_ChiDoan crpt_BaoCao_ChiDoan1;
     }
 }

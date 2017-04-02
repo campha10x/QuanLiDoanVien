@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>QuanLiDoanVien</RootNamespace>
     <AssemblyName>QuanLiDoanVien</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,13 +34,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
     <Reference Include="DevComponents.Instrumentation, Version=10.0.0.3, Culture=neutral, PublicKeyToken=bc4a9d761ea44ef0, processorArchitecture=MSIL" />
     <Reference Include="DevComponents.TreeGX, Version=10.0.0.3, Culture=neutral, PublicKeyToken=cfcbd7476b2389d1, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,6 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EncryptorMD5.cs" />
     <Compile Include="frmChiDoan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +92,28 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\crpt_BaoCao_ChiDoan.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crpt_BaoCao_ChiDoan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\crpt_TinhTrang.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crpt_TinhTrang.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\dts_BaoCao_CHiDoan.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dts_BaoCao_CHiDoan.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Dts_DoanVien_TinhTrang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dts_DoanVien_TinhTrang.xsd</DependentUpon>
+    </Compile>
     <Compile Include="UCBaoCaoTinhTrang.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -94,6 +125,18 @@
     </Compile>
     <Compile Include="UCQuanLiDoanVien.Designer.cs">
       <DependentUpon>UCQuanLiDoanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_BC_ChiDoan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_BC_ChiDoan.Designer.cs">
+      <DependentUpon>UC_BC_ChiDoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_HoatDongDoan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_HoatDongDoan.Designer.cs">
+      <DependentUpon>UC_HoatDongDoan.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="frmDMDanToc.resx">
       <DependentUpon>frmDMDanToc.cs</DependentUpon>
@@ -115,12 +158,30 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Report\crpt_BaoCao_ChiDoan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpt_BaoCao_ChiDoan.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\crpt_TinhTrang.resx">
+      <DependentUpon>crpt_TinhTrang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\crpt_TinhTrang.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpt_TinhTrang.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="UCBaoCaoTinhTrang.resx">
       <DependentUpon>UCBaoCaoTinhTrang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCQuanLiDoanVien.resx">
       <DependentUpon>UCQuanLiDoanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_BC_ChiDoan.resx">
+      <DependentUpon>UC_BC_ChiDoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_HoatDongDoan.resx">
+      <DependentUpon>UC_HoatDongDoan.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -131,6 +192,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Report\dts_BaoCao_CHiDoan.xsc">
+      <DependentUpon>dts_BaoCao_CHiDoan.xsd</DependentUpon>
+    </None>
+    <None Include="Report\dts_BaoCao_CHiDoan.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dts_BaoCao_CHiDoan.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\dts_BaoCao_CHiDoan.xss">
+      <DependentUpon>dts_BaoCao_CHiDoan.xsd</DependentUpon>
+    </None>
+    <None Include="Report\Dts_DoanVien_TinhTrang.xsc">
+      <DependentUpon>Dts_DoanVien_TinhTrang.xsd</DependentUpon>
+    </None>
+    <None Include="Report\Dts_DoanVien_TinhTrang.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Dts_DoanVien_TinhTrang.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\Dts_DoanVien_TinhTrang.xss">
+      <DependentUpon>Dts_DoanVien_TinhTrang.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -149,7 +232,9 @@
     <Content Include="Image\huy-hieu-doan-chinh-thuc_1.jpg" />
     <Content Include="Image\logo.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
