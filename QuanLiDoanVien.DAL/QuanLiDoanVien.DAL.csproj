@@ -41,8 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CanBoDoanController.cs" />
     <Compile Include="ChiDoanController.cs" />
     <Compile Include="DanTocController.cs" />
+    <Compile Include="HoatDongDoanController.cs" />
     <Compile Include="KhoaHocController.cs" />
     <Compile Include="NguoiDungController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

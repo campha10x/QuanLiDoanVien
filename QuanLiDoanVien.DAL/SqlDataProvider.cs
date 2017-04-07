@@ -9,7 +9,7 @@ namespace QuanLiDoanVien.DAL
 {
     public class SqlDataProvider
     {
-        public static SqlConnection connection;
+        private static SqlConnection connection;
         public SqlDataProvider()
         {
             if(connection==null)

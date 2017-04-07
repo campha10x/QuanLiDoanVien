@@ -33,6 +33,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,8 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CanBoDoanService.cs" />
     <Compile Include="ChiDoanService.cs" />
     <Compile Include="DanTocService.cs" />
+    <Compile Include="HoatDongDoanService.cs" />
     <Compile Include="KhoaHocService.cs" />
     <Compile Include="NguoiDungService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

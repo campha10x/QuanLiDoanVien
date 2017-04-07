@@ -127,5 +127,17 @@ namespace QuanLiDoanVien
             UC_BC_ChiDoan ucBCTT = new UC_BC_ChiDoan();
             addNewTab("Báo cáo đoàn viên theo chi đoàn", ucBCTT);
         }
+
+        private void buttonItem23_Click(object sender, EventArgs e)
+        {
+            UC_frmHoatDongDoan ucHDD = new UC_frmHoatDongDoan();
+            addNewTab("Quản lí hoạt động đoàn",ucHDD);
+        }
+
+        private void buttonItem24_Click(object sender, EventArgs e)
+        {
+            UC_BC_HDDoan uc_BC_HDD = new UC_BC_HDDoan();
+            addNewTab("Báo cáo hoạt động đoàn", uc_BC_HDD);
+        }
     }
 }
