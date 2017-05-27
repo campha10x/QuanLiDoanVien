@@ -34,5 +34,27 @@ namespace QuanLiDoanVien.DAL
             }
             return list;
         }
+        public bool NguoiDung_Update(tbl_NguoiDung data)
+        {
+            try
+            {
+                using (SqlCommand dbCmd = new SqlCommand("sp_NguoiDung_Update", GetConection()))
+                {
+                    dbCmd.CommandType = CommandType.StoredProcedure;
+                    dbCmd.Parameters.Add("@Id", data.Id);
+                    dbCmd.Parameters.Add("@TenDangNhap", data.TenDangNhap);
+                    dbCmd.Parameters.Add("@IdQuyen", data.IdQuyen);
+                    dbCmd.Parameters.Add("@MatKhau", data.MatKhau);
+                    dbCmd.Parameters.Add("@MaCB", data.MaCB);
+                    dbCmd.ExecuteNonQuery();
+
+                }
+                return true;
+            }
+            catch(Exception ex)
+            {
+                return false;
+            }
+        }
     }
 }

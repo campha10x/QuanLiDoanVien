@@ -14,6 +14,10 @@ namespace QuanLiDoanVien.BUS
         {
             return cmb.SinhVien_GetByTop(Top, Where, Order);
         }
+        public static List<int> SinhVien_XetDangVien(int NamBd, int NamKt)
+        {
+            return cmb.SinhVien_XetDangVien(NamBd, NamKt);
+        }
         public static bool SinhVien_Insert(tbl_SinhVien data)
         {
             return cmb.SinhVien_Insert(data);

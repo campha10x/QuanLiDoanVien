@@ -69,5 +69,10 @@ namespace QuanLiDoanVien
                 Dangnhap();
             }
         }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

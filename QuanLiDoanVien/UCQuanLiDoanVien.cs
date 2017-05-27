@@ -174,5 +174,66 @@ namespace QuanLiDoanVien
         {
             LamMoi();
         }
+
+        private void btnin_Click(object sender, EventArgs e)
+        {
+            List<tbl_ChiDoan> TenChiDoan = null;
+            TenChiDoan = ChiDoanService.ChiDoanGetByTop("", " MaChiDoan="+MaChiDoan+"", "");
+            //Khởi tạo Excel
+            Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
+            //Khởi tạo WorkBook
+            Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
+            //Khởi tạo WorkSheet
+            Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
+            worksheet = workbook.Sheets["Sheet1"];
+            worksheet = workbook.ActiveSheet;
+            app.Visible = true;
+
+            worksheet.Cells[2, 2] = "Danh sách thành viên chi đoàn ";
+            worksheet.Cells[4, 2] = "Lớp: ";
+            worksheet.Cells[4, 3] = TenChiDoan.First().TenChiDoan;
+            worksheet.Cells[7, 1] = "STT";
+            worksheet.Cells[7, 2] = "Mã sinh viên";
+            worksheet.Cells[7, 3] = "Họ và tên";
+            worksheet.Cells[7, 4] = "Ngày sinh";
+            worksheet.Cells[7, 5] = "Địa chỉ";
+            worksheet.Cells[7, 6] = "Điện thoại";
+            worksheet.Cells[7, 7] = "Mã chi đoàn";
+            worksheet.Cells[7, 8] = "Ngày vào đoàn";
+            worksheet.Cells[7, 9] = "Tình trạng";
+            worksheet.Cells[7, 10] = "Mã dân tộc";
+
+            for (int i = 0; i < dtgrvSinhVien.RowCount; i++)
+            {
+                for (int j = 0; j < 9; j++)
+                {
+                    worksheet.Cells[i + 8, 1] = i + 1;
+                    worksheet.Cells[i + 8, j + 2] = dtgrvSinhVien.Rows[i].Cells[j].Value;
+                }
+            }
+            int Sorow = dtgrvSinhVien.RowCount;
+
+            //Định dang cột
+            worksheet.Range["A1"].ColumnWidth = "6";
+            worksheet.Range["B1"].ColumnWidth = "15";
+            worksheet.Range["C1"].ColumnWidth = "24";
+            worksheet.Range["D1"].ColumnWidth = "12";
+            worksheet.Range["E1"].ColumnWidth = "24";
+            worksheet.Range["F1"].ColumnWidth = "17";
+            worksheet.Range["G1"].ColumnWidth = "14";
+            worksheet.Range["H1"].ColumnWidth = "17";
+            worksheet.Range["I1"].ColumnWidth = "15";
+            worksheet.Range["J1"].ColumnWidth = "16";
+            //Định dang font chữ
+            worksheet.Range["A1", "J100"].Font.Name = "Times New Roman";
+            worksheet.Range["A1", "J100"].Font.Size = 14;
+            worksheet.Range["A2", "J2"].MergeCells = true;
+            worksheet.Range["A2", "J2"].Font.Bold = true;
+            worksheet.Range["A2", "J2"].HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+            worksheet.Range["A2", "J2"].Font.Size = 17;
+            worksheet.Range["A7", "J" + (Sorow + 7)].Borders.LineStyle = 1;
+
+
+        }
     }
 }

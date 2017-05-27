@@ -48,7 +48,9 @@
     <Compile Include="tbl_HoatDongDoan.cs" />
     <Compile Include="tbl_KhoaHoc.cs" />
     <Compile Include="tbl_NguoiDung.cs" />
+    <Compile Include="tbl_PhiDoanVien.cs" />
     <Compile Include="tbl_SinhVien.cs" />
+    <Compile Include="tbl_XepLoaiSV.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

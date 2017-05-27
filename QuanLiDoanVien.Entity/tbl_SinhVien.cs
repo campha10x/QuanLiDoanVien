@@ -18,7 +18,7 @@ namespace QuanLiDoanVien.Entity
         private string _NgayVaoDoan;
         private string _TinhTrang;
         private string _MaDT;
-
+        private string _TinhTrangNopPhi;
         public string MaSV
         {
             get
@@ -141,6 +141,20 @@ namespace QuanLiDoanVien.Entity
                 _MaDT = value;
             }
         }
+
+        public string TinhTrangNopPhi
+        {
+            get
+            {
+                return _TinhTrangNopPhi;
+            }
+
+            set
+            {
+                _TinhTrangNopPhi = value;
+            }
+        }
+
         public tbl_SinhVien SinhVienIDataReader(IDataReader dr)
         {
             tbl_SinhVien obj = new tbl_SinhVien();
@@ -153,6 +167,7 @@ namespace QuanLiDoanVien.Entity
             obj.NgayVaoDoan = (dr["NgayVaoDoan"] is DBNull) ? string.Empty : dr["NgayVaoDoan"].ToString();
             obj.TinhTrang = (dr["TinhTrang"] is DBNull) ? string.Empty : dr["TinhTrang"].ToString();
             obj.MaDT = (dr["MaDT"] is DBNull) ? string.Empty : dr["MaDT"].ToString();
+            obj.TinhTrangNopPhi = (dr["TinhTrangNopPhi"] is DBNull) ? string.Empty : dr["TinhTrangNopPhi"].ToString();
             return obj;
         }
     }

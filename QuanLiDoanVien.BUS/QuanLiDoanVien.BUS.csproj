@@ -49,8 +49,10 @@
     <Compile Include="HoatDongDoanService.cs" />
     <Compile Include="KhoaHocService.cs" />
     <Compile Include="NguoiDungService.cs" />
+    <Compile Include="PhiDoanVienService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SinhVienService.cs" />
+    <Compile Include="XepLoaiSVService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\QuanLiDoanVien.DAL\QuanLiDoanVien.DAL.csproj">

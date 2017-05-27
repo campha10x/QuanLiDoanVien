@@ -24,7 +24,6 @@ namespace QuanLiDoanVien
             txtTenHD.Text = "";
             cbbNguoiphutrach.Text = "";
             dtipThoiGian.ResetValue();
-
             btnthem.Enabled = true;
             btnsua.Enabled = true;
             btnluu.Enabled = false;
@@ -33,7 +32,6 @@ namespace QuanLiDoanVien
             btndelete.Enabled = true;
             txtId.Enabled = false;
             dtgrvHdDoan.DataSource = lst;
-
         }
         public UC_frmHoatDongDoan()
         {
@@ -85,6 +83,7 @@ namespace QuanLiDoanVien
             btndelete.Enabled = false;
             btnsua.Enabled = true;
             btnhuy.Enabled = true;
+            btnluu.Enabled = true;
         }
 
         private void btndelete_Click(object sender, EventArgs e)
@@ -184,19 +183,19 @@ namespace QuanLiDoanVien
             worksheet = workbook.Sheets["Sheet1"];
             worksheet = workbook.ActiveSheet;
             app.Visible = true;
-            worksheet.Cells[1, 1] = "Danh sách hoạt động đoàn thanh niên ";
-            worksheet.Cells[3, 1] = "STT";
-            worksheet.Cells[3, 2] = "ID";
-            worksheet.Cells[3, 3] = "Tên hoạt động";
-            worksheet.Cells[3, 4] = "Thời gian";
-            worksheet.Cells[3, 5] = "Mã cán bộ";
-            worksheet.Cells[3, 6] = "Kết quả";
+            worksheet.Cells[2, 2] = "Danh sách hoạt động đoàn thanh niên ";
+            worksheet.Cells[7, 1] = "STT";
+            worksheet.Cells[7, 2] = "ID";
+            worksheet.Cells[7, 3] = "Tên hoạt động";
+            worksheet.Cells[7, 4] = "Thời gian";
+            worksheet.Cells[7, 5] = "Mã cán bộ";
+            worksheet.Cells[7, 6] = "Kết quả";
             for (int i = 0; i < dtgrvHdDoan.RowCount; i++)
             {
                 for (int j = 0; j <5; j++)
                 {
-                    worksheet.Cells[i + 4, 1] = i + 1;
-                    worksheet.Cells[i + 4, j + 2] = dtgrvHdDoan.Rows[i].Cells[j].Value;
+                    worksheet.Cells[i + 8, 1] = i + 1;
+                    worksheet.Cells[i + 8, j + 2] = dtgrvHdDoan.Rows[i].Cells[j].Value;
                 }
             }
             int HD_Doan = dtgrvHdDoan.RowCount;
@@ -209,22 +208,25 @@ namespace QuanLiDoanVien
             worksheet.PageSetup.BottomMargin = 0;
             //Định dang cột
             worksheet.Range["A1"].ColumnWidth = 8.43;
-            worksheet.Range["B1"].ColumnWidth = 8.43;
+            worksheet.Range["B1"].ColumnWidth = 10;
             worksheet.Range["C1"].ColumnWidth = 27.71;
-            worksheet.Range["D1"].ColumnWidth = 16.71;
+            worksheet.Range["D1"].ColumnWidth = 13;
             worksheet.Range["E1"].ColumnWidth = 12.14;
             worksheet.Range["F1"].ColumnWidth = 21;
+
+          
             //Định dạng font chữ
-            worksheet.Range["A1", "F1"].HorizontalAlignment = 3;
-            worksheet.Range["A1", "F1"].Font.Size = 16;
             worksheet.Range["A1", "F100"].Font.Name = "Times New Roman";
-            worksheet.Range["A3", "F100"].Font.Size = 14;
-            worksheet.Range["A1","F1"].MergeCells = true;
-            worksheet.Range["A1", "F1"].Font.Bold = true;
-            worksheet.Range["A3", "F3"].Font.Bold = true;
-            //Kẻ bảng điểm
-            worksheet.Range["A3", "F" + (HD_Doan+3)].Borders.LineStyle = 1;
-            //Định dạng dòng text
+            worksheet.Range["A1", "F100"].Font.Size = 14;
+            worksheet.Range["A2", "F2"].MergeCells = true;
+            worksheet.Range["A2", "F2"].Font.Bold = true;
+            worksheet.Range["A2", "F2"].HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+            worksheet.Range["A2", "F2"].Font.Size = 17;
+            worksheet.Range["A7", "F" + (HD_Doan + 7)].Borders.LineStyle = 1;
+        }
+
+        private void btnhome_Click(object sender, EventArgs e)
+        {
 
         }
     }

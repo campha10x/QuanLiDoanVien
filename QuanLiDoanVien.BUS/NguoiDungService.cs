@@ -14,5 +14,9 @@ namespace QuanLiDoanVien.BUS
         {
             return cmb.NguoiDung_GetByTop(Top,Where,Order);
         }
+        public static bool NguoiDung_Update(tbl_NguoiDung data)
+        {
+            return cmb.NguoiDung_Update(data);
+        }
     }
 }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_frmHoatDongDoan));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
             this.btnin = new DevComponents.DotNetBar.ButtonX();
             this.btnhome = new DevComponents.DotNetBar.ButtonX();
@@ -58,6 +58,7 @@
             this.columnmaCB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnKQ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
             this.panelEx1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtipThoiGian)).BeginInit();
@@ -114,6 +115,7 @@
             this.btnhome.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnhome.TabIndex = 6;
             this.btnhome.Text = "Home";
+            this.btnhome.Click += new System.EventHandler(this.btnhome_Click);
             // 
             // btnhuy
             // 
@@ -192,9 +194,9 @@
             this.groupBox1.Controls.Add(this.labelX2);
             this.groupBox1.Controls.Add(this.txtId);
             this.groupBox1.Controls.Add(this.labelX1);
-            this.groupBox1.Location = new System.Drawing.Point(0, 4);
+            this.groupBox1.Location = new System.Drawing.Point(0, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(302, 325);
+            this.groupBox1.Size = new System.Drawing.Size(302, 326);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin hoạt động đoàn";
@@ -374,7 +376,7 @@
             // 
             this.txtsearch.Border.Class = "TextBoxBorder";
             this.txtsearch.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtsearch.Location = new System.Drawing.Point(640, 14);
+            this.txtsearch.Location = new System.Drawing.Point(630, 28);
             this.txtsearch.Name = "txtsearch";
             this.txtsearch.Size = new System.Drawing.Size(194, 23);
             this.txtsearch.TabIndex = 6;
@@ -388,9 +390,9 @@
             // 
             this.labelX6.BackgroundStyle.Class = "";
             this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX6.Location = new System.Drawing.Point(428, 14);
+            this.labelX6.Location = new System.Drawing.Point(446, 27);
             this.labelX6.Name = "labelX6";
-            this.labelX6.Size = new System.Drawing.Size(206, 23);
+            this.labelX6.Size = new System.Drawing.Size(178, 23);
             this.labelX6.TabIndex = 5;
             this.labelX6.Text = "Tìm kiếm theo tên hoạt động";
             // 
@@ -406,14 +408,14 @@
             this.columnThoiGian,
             this.columnmaCB,
             this.columnKQ});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgrvHdDoan.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgrvHdDoan.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtgrvHdDoan.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
             this.dtgrvHdDoan.Location = new System.Drawing.Point(311, 57);
             this.dtgrvHdDoan.Name = "dtgrvHdDoan";
@@ -455,10 +457,23 @@
             this.columnKQ.HeaderText = "Kết quả";
             this.columnKQ.Name = "columnKQ";
             // 
+            // buttonX1
+            // 
+            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX1.Image = ((System.Drawing.Image)(resources.GetObject("buttonX1.Image")));
+            this.buttonX1.Location = new System.Drawing.Point(841, 14);
+            this.buttonX1.Name = "buttonX1";
+            this.buttonX1.Size = new System.Drawing.Size(65, 37);
+            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX1.TabIndex = 7;
+            // 
             // UC_frmHoatDongDoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.buttonX1);
             this.Controls.Add(this.txtsearch);
             this.Controls.Add(this.labelX6);
             this.Controls.Add(this.dtgrvHdDoan);
@@ -506,5 +521,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn columnmaCB;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnKQ;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private DevComponents.DotNetBar.ButtonX buttonX1;
     }
 }

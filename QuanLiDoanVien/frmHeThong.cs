@@ -13,7 +13,7 @@ namespace QuanLiDoanVien
 {
     public partial class frmHeThong : DevComponents.DotNetBar.Office2007RibbonForm
     {
-       
+        public static string Id_User="1";
         public frmHeThong()
         {
             InitializeComponent();
@@ -138,6 +138,36 @@ namespace QuanLiDoanVien
         {
             UC_BC_HDDoan uc_BC_HDD = new UC_BC_HDDoan();
             addNewTab("Báo cáo hoạt động đoàn", uc_BC_HDD);
+        }
+
+        private void buttonItem15_Click(object sender, EventArgs e)
+        {
+            frmDoiMatKhau frm = new frmDoiMatKhau();
+            frm.ID_User = Id_User;
+            frm.ShowDialog();
+        }
+
+        private void buttonItem14_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnXepLoaiDV_Click(object sender, EventArgs e)
+        {
+            UC_XepLoaiDV ucXepLoaiDV = new UC_XepLoaiDV();
+            addNewTab("Quản lí xếp loại đoàn viên", ucXepLoaiDV);
+        }
+
+        private void buttonItem18_Click(object sender, EventArgs e)
+        {
+            frmDMDanToc frm = new frmDMDanToc();
+            frm.Show();
+        }
+
+        private void buttonItem26_Click(object sender, EventArgs e)
+        {
+            UC_QuanLiPhiDoan ucQuanLiPhiDoan = new UC_QuanLiPhiDoan();
+            addNewTab("Quản lí phí đoàn viên", ucQuanLiPhiDoan);
         }
     }
 }

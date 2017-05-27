@@ -33,6 +33,27 @@ namespace QuanLiDoanVien.DAL
             }
             return list;
         }
+        public List<int> SinhVien_XetDangVien(int NamBd , int NamKt)
+        {
+            List<int> list = new List<int>();
+            using (SqlCommand dbCmd = new SqlCommand("sp_XetDangVien", GetConection()))
+            {
+                dbCmd.CommandType = CommandType.StoredProcedure;
+                dbCmd.Parameters.Add(new SqlParameter("@NamBd", NamBd));
+                dbCmd.Parameters.Add(new SqlParameter("@NamKT", NamKt));
+                SqlDataReader dr = dbCmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        list.Add(Convert.ToInt32(dr["MaSV"]));
+                    }
+                }
+                dr.Close();
+            }
+            return list;
+        }
+
         public bool SinhVien_Insert(tbl_SinhVien data)
         {
             try

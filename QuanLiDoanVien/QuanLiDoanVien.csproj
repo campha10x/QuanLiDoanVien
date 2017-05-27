@@ -116,11 +116,23 @@
     <Compile Include="frmChiDoan.Designer.cs">
       <DependentUpon>frmChiDoan.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDeXuatDangVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDeXuatDangVien.Designer.cs">
+      <DependentUpon>frmDeXuatDangVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDMDanToc.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmDMDanToc.Designer.cs">
       <DependentUpon>frmDMDanToc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDoiMatKhau.Designer.cs">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </Compile>
     <Compile Include="frmHeThong.cs">
       <SubType>Form</SubType>
@@ -139,6 +151,12 @@
     </Compile>
     <Compile Include="frmSinhVien.Designer.cs">
       <DependentUpon>frmSinhVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTinhTrangNopPhi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTinhTrangNopPhi.Designer.cs">
+      <DependentUpon>frmTinhTrangNopPhi.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -205,11 +223,29 @@
     <Compile Include="UC_frmHoatDongDoan.Designer.cs">
       <DependentUpon>UC_frmHoatDongDoan.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_QuanLiPhiDoan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_QuanLiPhiDoan.Designer.cs">
+      <DependentUpon>UC_QuanLiPhiDoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_XepLoaiDV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_XepLoaiDV.Designer.cs">
+      <DependentUpon>UC_XepLoaiDV.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="cbbCanBoDoan.resx">
       <DependentUpon>cbbCanBoDoan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmDeXuatDangVien.resx">
+      <DependentUpon>frmDeXuatDangVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDMDanToc.resx">
       <DependentUpon>frmDMDanToc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDoiMatKhau.resx">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmHeThong.resx">
       <DependentUpon>frmHeThong.cs</DependentUpon>
@@ -219,6 +255,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSinhVien.resx">
       <DependentUpon>frmSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTinhTrangNopPhi.resx">
+      <DependentUpon>frmTinhTrangNopPhi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -259,6 +298,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_frmHoatDongDoan.resx">
       <DependentUpon>UC_frmHoatDongDoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_QuanLiPhiDoan.resx">
+      <DependentUpon>UC_QuanLiPhiDoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_XepLoaiDV.resx">
+      <DependentUpon>UC_XepLoaiDV.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
