@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_XepLoaiDV));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.buttonX3 = new DevComponents.DotNetBar.ButtonX();
+            this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
             this.btndxdangvien = new DevComponents.DotNetBar.ButtonX();
             this.txtSearch = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
@@ -57,8 +59,6 @@
             this.Nam = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.XepLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
-            this.buttonX3 = new DevComponents.DotNetBar.ButtonX();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgrvDV)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -86,9 +86,36 @@
             this.groupBox1.Text = "Đoàn viên";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // buttonX3
+            // 
+            this.buttonX3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonX3.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX3.Image = ((System.Drawing.Image)(resources.GetObject("buttonX3.Image")));
+            this.buttonX3.Location = new System.Drawing.Point(564, 122);
+            this.buttonX3.Name = "buttonX3";
+            this.buttonX3.Size = new System.Drawing.Size(59, 34);
+            this.buttonX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX3.TabIndex = 15;
+            // 
+            // buttonX2
+            // 
+            this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX2.Image = ((System.Drawing.Image)(resources.GetObject("buttonX2.Image")));
+            this.buttonX2.Location = new System.Drawing.Point(456, 22);
+            this.buttonX2.Name = "buttonX2";
+            this.buttonX2.Size = new System.Drawing.Size(167, 40);
+            this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX2.TabIndex = 14;
+            this.buttonX2.Text = "&Xem tình trạng nộp  phí";
+            this.buttonX2.Click += new System.EventHandler(this.buttonX2_Click);
+            // 
             // btndxdangvien
             // 
             this.btndxdangvien.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btndxdangvien.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btndxdangvien.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btndxdangvien.Image = ((System.Drawing.Image)(resources.GetObject("btndxdangvien.Image")));
             this.btndxdangvien.Location = new System.Drawing.Point(456, 70);
@@ -96,7 +123,7 @@
             this.btndxdangvien.Size = new System.Drawing.Size(167, 40);
             this.btndxdangvien.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btndxdangvien.TabIndex = 13;
-            this.btndxdangvien.Text = "Đề xuất lên đảng viên";
+            this.btndxdangvien.Text = "&Đề xuất lên đảng viên";
             this.btndxdangvien.Click += new System.EventHandler(this.btndxdangvien_Click);
             // 
             // txtSearch
@@ -140,15 +167,15 @@
             this.NgaySinh,
             this.DienThoai,
             this.TinhTrang});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgrvDV.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dtgrvDV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgrvDV.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dtgrvDV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
             this.dtgrvDV.Location = new System.Drawing.Point(0, 170);
             this.dtgrvDV.Name = "dtgrvDV";
             this.dtgrvDV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -219,12 +246,12 @@
             this.btnin.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnin.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnin.Image = ((System.Drawing.Image)(resources.GetObject("btnin.Image")));
-            this.btnin.Location = new System.Drawing.Point(385, 122);
+            this.btnin.Location = new System.Drawing.Point(384, 122);
             this.btnin.Name = "btnin";
             this.btnin.Size = new System.Drawing.Size(75, 34);
             this.btnin.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnin.TabIndex = 12;
-            this.btnin.Text = "In";
+            this.btnin.Text = "&In";
             this.btnin.Click += new System.EventHandler(this.btnin_Click);
             // 
             // nmrudNam
@@ -259,7 +286,7 @@
             this.buttonX1.Size = new System.Drawing.Size(75, 34);
             this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.buttonX1.TabIndex = 10;
-            this.buttonX1.Text = "Hủy";
+            this.buttonX1.Text = "&Hủy";
             this.buttonX1.Click += new System.EventHandler(this.buttonX1_Click);
             // 
             // btnxoa
@@ -272,7 +299,7 @@
             this.btnxoa.Size = new System.Drawing.Size(75, 34);
             this.btnxoa.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnxoa.TabIndex = 9;
-            this.btnxoa.Text = "Xóa";
+            this.btnxoa.Text = "&Xóa";
             this.btnxoa.Click += new System.EventHandler(this.btnxoa_Click);
             // 
             // btnsua
@@ -285,7 +312,7 @@
             this.btnsua.Size = new System.Drawing.Size(75, 34);
             this.btnsua.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnsua.TabIndex = 8;
-            this.btnsua.Text = "Sửa";
+            this.btnsua.Text = "&Sửa";
             this.btnsua.Click += new System.EventHandler(this.btnsua_Click);
             // 
             // btnluu
@@ -298,7 +325,7 @@
             this.btnluu.Size = new System.Drawing.Size(75, 34);
             this.btnluu.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnluu.TabIndex = 7;
-            this.btnluu.Text = "Lưu";
+            this.btnluu.Text = "&Lưu";
             this.btnluu.Click += new System.EventHandler(this.btnluu_Click);
             // 
             // btnthem
@@ -311,7 +338,7 @@
             this.btnthem.Size = new System.Drawing.Size(75, 34);
             this.btnthem.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnthem.TabIndex = 6;
-            this.btnthem.Text = "Thêm";
+            this.btnthem.Text = "&Thêm";
             this.btnthem.Click += new System.EventHandler(this.btnthem_Click);
             // 
             // cbbxeploai
@@ -362,15 +389,15 @@
             this.Id,
             this.Nam,
             this.XepLoai});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgrvXeploaiDV.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dtgrvXeploaiDV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgrvXeploaiDV.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dtgrvXeploaiDV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
             this.dtgrvXeploaiDV.Location = new System.Drawing.Point(0, 167);
             this.dtgrvXeploaiDV.Name = "dtgrvXeploaiDV";
             this.dtgrvXeploaiDV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -396,31 +423,6 @@
             this.XepLoai.DataPropertyName = "XepLoai";
             this.XepLoai.HeaderText = "Xếp loại";
             this.XepLoai.Name = "XepLoai";
-            // 
-            // buttonX2
-            // 
-            this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX2.Image = ((System.Drawing.Image)(resources.GetObject("buttonX2.Image")));
-            this.buttonX2.Location = new System.Drawing.Point(456, 22);
-            this.buttonX2.Name = "buttonX2";
-            this.buttonX2.Size = new System.Drawing.Size(167, 40);
-            this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX2.TabIndex = 14;
-            this.buttonX2.Text = "Xem tình trạng nộp  phí";
-            this.buttonX2.Click += new System.EventHandler(this.buttonX2_Click);
-            // 
-            // buttonX3
-            // 
-            this.buttonX3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonX3.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX3.Image = ((System.Drawing.Image)(resources.GetObject("buttonX3.Image")));
-            this.buttonX3.Location = new System.Drawing.Point(564, 122);
-            this.buttonX3.Name = "buttonX3";
-            this.buttonX3.Size = new System.Drawing.Size(59, 34);
-            this.buttonX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX3.TabIndex = 15;
             // 
             // UC_XepLoaiDV
             // 

@@ -1,6 +1,6 @@
 ﻿namespace QuanLiDoanVien
 {
-    partial class frmDMDanToc
+    partial class frmKhoaHoc
     {
         /// <summary>
         /// Required designer variable.
@@ -29,11 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDMDanToc));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.dtgrvDanToc = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.madt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmKhoaHoc));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnthem = new System.Windows.Forms.Button();
             this.btnsua = new System.Windows.Forms.Button();
@@ -41,71 +37,24 @@
             this.btnluu = new System.Windows.Forms.Button();
             this.btnhuy = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
-            this.txttendt = new System.Windows.Forms.TextBox();
+            this.txttgdaotao = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtmadt = new System.Windows.Forms.TextBox();
+            this.txtmakh = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.dtgrvKhoahoc = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.MaKhoaHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThoiGianDaoTao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.txtsearch = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgrvDanToc)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgrvKhoahoc)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.dtgrvDanToc);
-            this.panel1.Location = new System.Drawing.Point(0, 252);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(719, 246);
-            this.panel1.TabIndex = 0;
-            // 
-            // dtgrvDanToc
-            // 
-            this.dtgrvDanToc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgrvDanToc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.madt,
-            this.tenDT});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgrvDanToc.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dtgrvDanToc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtgrvDanToc.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.dtgrvDanToc.Location = new System.Drawing.Point(0, 0);
-            this.dtgrvDanToc.Name = "dtgrvDanToc";
-            this.dtgrvDanToc.ReadOnly = true;
-            this.dtgrvDanToc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgrvDanToc.Size = new System.Drawing.Size(719, 246);
-            this.dtgrvDanToc.TabIndex = 1;
-            this.dtgrvDanToc.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgrvDanToc_CellContentClick);
-            // 
-            // madt
-            // 
-            this.madt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.madt.DataPropertyName = "MaDT";
-            this.madt.HeaderText = "Mã dân tộc";
-            this.madt.Name = "madt";
-            this.madt.ReadOnly = true;
-            // 
-            // tenDT
-            // 
-            this.tenDT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tenDT.DataPropertyName = "TenDT";
-            this.tenDT.HeaderText = "Tên dân tộc";
-            this.tenDT.Name = "tenDT";
-            this.tenDT.ReadOnly = true;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.buttonX2);
-            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtsearch);
             this.groupBox1.Controls.Add(this.btnthem);
             this.groupBox1.Controls.Add(this.btnsua);
@@ -113,19 +62,18 @@
             this.groupBox1.Controls.Add(this.btnluu);
             this.groupBox1.Controls.Add(this.btnhuy);
             this.groupBox1.Controls.Add(this.btnHome);
-            this.groupBox1.Controls.Add(this.txttendt);
+            this.groupBox1.Controls.Add(this.txttgdaotao);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txtmadt);
+            this.groupBox1.Controls.Add(this.txtmakh);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(5, 13);
+            this.groupBox1.Location = new System.Drawing.Point(4, 4);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(714, 232);
-            this.groupBox1.TabIndex = 1;
+            this.groupBox1.Size = new System.Drawing.Size(820, 226);
+            this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Cập nhật dân tộc";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            this.groupBox1.Text = "Cập nhật khóa học";
             // 
             // btnthem
             // 
@@ -205,41 +153,75 @@
             this.btnHome.UseVisualStyleBackColor = true;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // txttendt
+            // txttgdaotao
             // 
-            this.txttendt.Location = new System.Drawing.Point(210, 85);
-            this.txttendt.Name = "txttendt";
-            this.txttendt.Size = new System.Drawing.Size(158, 23);
-            this.txttendt.TabIndex = 3;
-            this.txttendt.TextChanged += new System.EventHandler(this.txttendt_TextChanged);
+            this.txttgdaotao.Location = new System.Drawing.Point(260, 88);
+            this.txttgdaotao.Name = "txttgdaotao";
+            this.txttgdaotao.Size = new System.Drawing.Size(158, 23);
+            this.txttgdaotao.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(99, 91);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 17);
+            this.label2.Size = new System.Drawing.Size(119, 17);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Tên dân tộc";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.label2.Text = "Thời gian đào tạo";
             // 
-            // txtmadt
+            // txtmakh
             // 
-            this.txtmadt.Location = new System.Drawing.Point(210, 42);
-            this.txtmadt.Name = "txtmadt";
-            this.txtmadt.Size = new System.Drawing.Size(158, 23);
-            this.txtmadt.TabIndex = 1;
-            this.txtmadt.TextChanged += new System.EventHandler(this.txtmadt_TextChanged);
+            this.txtmakh.Location = new System.Drawing.Point(260, 45);
+            this.txtmakh.Name = "txtmakh";
+            this.txtmakh.Size = new System.Drawing.Size(158, 23);
+            this.txtmakh.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(99, 48);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 17);
+            this.label1.Size = new System.Drawing.Size(89, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Mã dân tộc";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            this.label1.Text = "Mã khóa học";
+            // 
+            // dtgrvKhoahoc
+            // 
+            this.dtgrvKhoahoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgrvKhoahoc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaKhoaHoc,
+            this.ThoiGianDaoTao});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgrvKhoahoc.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dtgrvKhoahoc.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.dtgrvKhoahoc.Location = new System.Drawing.Point(4, 237);
+            this.dtgrvKhoahoc.Name = "dtgrvKhoahoc";
+            this.dtgrvKhoahoc.ReadOnly = true;
+            this.dtgrvKhoahoc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgrvKhoahoc.Size = new System.Drawing.Size(821, 230);
+            this.dtgrvKhoahoc.TabIndex = 3;
+            // 
+            // MaKhoaHoc
+            // 
+            this.MaKhoaHoc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MaKhoaHoc.DataPropertyName = "MaKhoaHoc";
+            this.MaKhoaHoc.HeaderText = "Mã khóa học";
+            this.MaKhoaHoc.Name = "MaKhoaHoc";
+            this.MaKhoaHoc.ReadOnly = true;
+            // 
+            // ThoiGianDaoTao
+            // 
+            this.ThoiGianDaoTao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ThoiGianDaoTao.DataPropertyName = "ThoiGianDaoTao";
+            this.ThoiGianDaoTao.HeaderText = "Thời gian đào tạo";
+            this.ThoiGianDaoTao.Name = "ThoiGianDaoTao";
+            this.ThoiGianDaoTao.ReadOnly = true;
             // 
             // buttonX2
             // 
@@ -247,21 +229,21 @@
             this.buttonX2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.buttonX2.Image = ((System.Drawing.Image)(resources.GetObject("buttonX2.Image")));
-            this.buttonX2.Location = new System.Drawing.Point(637, 192);
+            this.buttonX2.Location = new System.Drawing.Point(759, 183);
             this.buttonX2.Name = "buttonX2";
             this.buttonX2.Size = new System.Drawing.Size(50, 36);
             this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX2.TabIndex = 12;
+            this.buttonX2.TabIndex = 18;
             // 
-            // label3
+            // label4
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(312, 208);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(124, 17);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Tìm kiếm theo tên ";
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(373, 198);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(162, 17);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Tìm kiếm theo khóa học ";
             // 
             // txtsearch
             // 
@@ -271,36 +253,34 @@
             // 
             this.txtsearch.Border.Class = "TextBoxBorder";
             this.txtsearch.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtsearch.Location = new System.Drawing.Point(442, 202);
+            this.txtsearch.Location = new System.Drawing.Point(560, 196);
             this.txtsearch.Name = "txtsearch";
             this.txtsearch.Size = new System.Drawing.Size(179, 23);
-            this.txtsearch.TabIndex = 10;
+            this.txtsearch.TabIndex = 16;
             this.txtsearch.TextChanged += new System.EventHandler(this.txtsearch_TextChanged);
             // 
-            // frmDMDanToc
+            // frmKhoaHoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(726, 495);
+            this.ClientSize = new System.Drawing.Size(837, 470);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.dtgrvKhoahoc);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "frmDMDanToc";
-            this.Text = "frmDMDanToc";
-            this.Load += new System.EventHandler(this.frmDMDanToc_Load);
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgrvDanToc)).EndInit();
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "frmKhoaHoc";
+            this.Text = "Cập nhật khóa học";
+            this.Load += new System.EventHandler(this.frmKhoaHoc_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgrvKhoahoc)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnthem;
         private System.Windows.Forms.Button btnsua;
@@ -308,15 +288,15 @@
         private System.Windows.Forms.Button btnluu;
         private System.Windows.Forms.Button btnhuy;
         private System.Windows.Forms.Button btnHome;
-        private System.Windows.Forms.TextBox txttendt;
+        private System.Windows.Forms.TextBox txttgdaotao;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtmadt;
+        private System.Windows.Forms.TextBox txtmakh;
         private System.Windows.Forms.Label label1;
-        private DevComponents.DotNetBar.Controls.DataGridViewX dtgrvDanToc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn madt;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tenDT;
+        private DevComponents.DotNetBar.Controls.DataGridViewX dtgrvKhoahoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaKhoaHoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ThoiGianDaoTao;
         private DevComponents.DotNetBar.ButtonX buttonX2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
         private DevComponents.DotNetBar.Controls.TextBoxX txtsearch;
     }
 }

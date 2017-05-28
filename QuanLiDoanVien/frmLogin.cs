@@ -11,7 +11,7 @@ using QuanLiDoanVien.BUS;
 using QuanLiDoanVien.Entity;
 namespace QuanLiDoanVien
 {
-    public partial class frmLogin : Form
+    public partial class frmLogin : DevComponents.DotNetBar.Office2007Form
     {
         public frmLogin()
         {

@@ -62,7 +62,7 @@
             // 
             this.txttaikhoan.Location = new System.Drawing.Point(353, 80);
             this.txttaikhoan.Name = "txttaikhoan";
-            this.txttaikhoan.Size = new System.Drawing.Size(170, 23);
+            this.txttaikhoan.Size = new System.Drawing.Size(203, 23);
             this.txttaikhoan.TabIndex = 2;
             this.txttaikhoan.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txttaikhoan_KeyDown);
             // 
@@ -71,7 +71,7 @@
             this.txtmatkhau.Location = new System.Drawing.Point(353, 127);
             this.txtmatkhau.Name = "txtmatkhau";
             this.txtmatkhau.PasswordChar = '*';
-            this.txtmatkhau.Size = new System.Drawing.Size(170, 23);
+            this.txtmatkhau.Size = new System.Drawing.Size(203, 23);
             this.txtmatkhau.TabIndex = 4;
             this.txtmatkhau.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtmatkhau_KeyDown);
             // 
@@ -86,21 +86,27 @@
             // 
             // btnthoat
             // 
-            this.btnthoat.Location = new System.Drawing.Point(447, 179);
+            this.btnthoat.Image = ((System.Drawing.Image)(resources.GetObject("btnthoat.Image")));
+            this.btnthoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnthoat.Location = new System.Drawing.Point(466, 179);
             this.btnthoat.Name = "btnthoat";
-            this.btnthoat.Size = new System.Drawing.Size(75, 31);
+            this.btnthoat.Size = new System.Drawing.Size(90, 31);
             this.btnthoat.TabIndex = 5;
-            this.btnthoat.Text = "Hủy bỏ";
+            this.btnthoat.Text = "&Hủy bỏ";
+            this.btnthoat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnthoat.UseVisualStyleBackColor = true;
             this.btnthoat.Click += new System.EventHandler(this.btnthoat_Click);
             // 
             // btndangnhap
             // 
-            this.btndangnhap.Location = new System.Drawing.Point(338, 179);
+            this.btndangnhap.Image = ((System.Drawing.Image)(resources.GetObject("btndangnhap.Image")));
+            this.btndangnhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btndangnhap.Location = new System.Drawing.Point(344, 179);
             this.btndangnhap.Name = "btndangnhap";
-            this.btndangnhap.Size = new System.Drawing.Size(88, 31);
+            this.btndangnhap.Size = new System.Drawing.Size(113, 31);
             this.btndangnhap.TabIndex = 6;
-            this.btndangnhap.Text = "Đăng nhập";
+            this.btndangnhap.Text = "&Đăng nhập";
+            this.btndangnhap.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btndangnhap.UseVisualStyleBackColor = true;
             this.btndangnhap.Click += new System.EventHandler(this.btndangnhap_Click);
             // 
@@ -116,10 +122,13 @@
             this.Controls.Add(this.txttaikhoan);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmLogin";
-            this.Text = "frmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Đăng nhập";
             this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

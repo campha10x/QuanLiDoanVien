@@ -140,6 +140,12 @@
     <Compile Include="frmHeThong.Designer.cs">
       <DependentUpon>frmHeThong.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmKhoaHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKhoaHoc.Designer.cs">
+      <DependentUpon>frmKhoaHoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -238,6 +244,9 @@
     <EmbeddedResource Include="cbbCanBoDoan.resx">
       <DependentUpon>cbbCanBoDoan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmChiDoan.resx">
+      <DependentUpon>frmChiDoan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDeXuatDangVien.resx">
       <DependentUpon>frmDeXuatDangVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -249,6 +258,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmHeThong.resx">
       <DependentUpon>frmHeThong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKhoaHoc.resx">
+      <DependentUpon>frmKhoaHoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

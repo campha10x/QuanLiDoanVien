@@ -14,5 +14,18 @@ namespace QuanLiDoanVien.BUS
         {
             return cmb.ChiDoanGetByTop(Top, Where, Order);
         }
+        public static bool ChiDoan_Insert(tbl_ChiDoan data)
+        {
+            return cmb.ChiDoan_Insert(data);
+        }
+
+        public static bool ChiDoan_Update(tbl_ChiDoan data)
+        {
+            return cmb.ChiDoan_Update(data);
+        }
+        public static bool ChiDoan_Delete(tbl_ChiDoan data)
+        {
+            return cmb.ChiDoan_Delete(data);
+        }
     }
 }

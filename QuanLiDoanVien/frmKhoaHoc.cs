@@ -5,7 +5,6 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuanLiDoanVien.BUS;
 using QuanLiDoanVien.Entity;
@@ -13,71 +12,69 @@ using System.Text.RegularExpressions;
 
 namespace QuanLiDoanVien
 {
-    public partial class frmChiDoan : DevComponents.DotNetBar.Office2007Form
+    public partial class frmKhoaHoc : DevComponents.DotNetBar.Office2007Form
     {
         private bool them;
-        public frmChiDoan()
-        {
-            InitializeComponent();
-        }
         private void LoadDataOnGriview()
         {
-            txtmachidoan.Text = "";
-            txttenchidoan.Text = "";
-
-            cbbmakhoahoc.DisplayMember = "ThoiGianDaoTao";
-            cbbmakhoahoc.ValueMember = "MaKhoaHoc";
-            cbbmakhoahoc.DataSource = KhoaHocService.KhoaHocGetByTop("","","");
+            txtmakh.Text = "";
+            txttgdaotao.Text = "";
             btnthem.Enabled = true;
             btnsua.Enabled = true;
             btnluu.Enabled = true;
             btnxoa.Enabled = true;
-            dtgrvchidoan.DataSource = ChiDoanService.ChiDoanGetByTop("", "", "");
+            dtgrvKhoahoc.DataSource = KhoaHocService.KhoaHocGetByTop("", "", "");
         }
-        private void frmChiDoan_Load(object sender, EventArgs e)
+        public frmKhoaHoc()
         {
-            txtmachidoan.Enabled = false;
+            InitializeComponent();
+        }
+
+        private void frmKhoaHoc_Load(object sender, EventArgs e)
+        {
+            txtmakh.Enabled = false;
             LoadDataOnGriview();
-        }
-
-        private void txttendt_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtmadt_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnsua_Click(object sender, EventArgs e)
-        {
-            them = false;
-            txtmachidoan.Text = dtgrvchidoan.CurrentRow.Cells["MaChiDoan"].Value.ToString();
-            txttenchidoan.Text = dtgrvchidoan.CurrentRow.Cells["TenChiDoan"].Value.ToString();
-            cbbmakhoahoc.SelectedValue = dtgrvchidoan.CurrentRow.Cells["MaKhoaHoc"].Value.ToString();
-            btnthem.Enabled = false;
-            btnxoa.Enabled = false;
         }
 
         private void btnthem_Click(object sender, EventArgs e)
         {
             them = true;
-            List<Entity.tbl_ChiDoan> lst = new List<tbl_ChiDoan>();
-            lst = ChiDoanService.ChiDoanGetByTop("", "", "");
+            List<Entity.tbl_KhoaHoc> lst = new List<tbl_KhoaHoc>();
+            lst = KhoaHocService.KhoaHocGetByTop("", "", "");
             if (lst.Count != 0)
             {
-                txtmachidoan.Text = (Convert.ToInt32(lst[lst.Count - 1].MaChiDoan) + 1).ToString();
+                txtmakh.Text = (Convert.ToInt32(lst[lst.Count - 1].MaKhoaHoc) + 1).ToString();
             }
             else
-                txtmachidoan.Text = "1";
+                txtmakh.Text = "1";
             btnsua.Enabled = false;
             btnxoa.Enabled = false;
         }
 
+        private void btnsua_Click(object sender, EventArgs e)
+        {
+            them = false;
+            txtmakh.Text = dtgrvKhoahoc.CurrentRow.Cells["MaKhoaHoc"].Value.ToString();
+            txttgdaotao.Text = dtgrvKhoahoc.CurrentRow.Cells["ThoiGianDaoTao"].Value.ToString();
+            btnthem.Enabled = false;
+            btnxoa.Enabled = false;
+        }
+
+        private void btnxoa_Click(object sender, EventArgs e)
+        {
+            DialogResult h = MessageBox.Show("Bạn có chắc muốn xoá không? ", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (h == DialogResult.Yes)
+            {
+                tbl_KhoaHoc dt = new tbl_KhoaHoc();
+                dt.MaKhoaHoc = dtgrvKhoahoc.CurrentRow.Cells["MaKhoaHoc"].Value.ToString();
+                KhoaHocService.KhoaHoc_Delete(dt);
+                LoadDataOnGriview();
+            }
+        }
+
         private void btnluu_Click(object sender, EventArgs e)
         {
-            if (txttenchidoan.Text == "")
+            if (txttgdaotao.Text == "")
             {
                 MessageBox.Show("Bạn phải nhập đầy đủ thông tin!!!");
                 return;
@@ -86,35 +83,21 @@ namespace QuanLiDoanVien
             {
                 if (them == true)
                 {
-                    tbl_ChiDoan dt = new tbl_ChiDoan();
-                    dt.TenChiDoan = txttenchidoan.Text;
-                    dt.MaKhoaHoc = cbbmakhoahoc.SelectedValue.ToString();
-                    ChiDoanService.ChiDoan_Insert(dt);
+                    tbl_KhoaHoc dt = new tbl_KhoaHoc();
+                    dt.ThoiGianDaoTao = txttgdaotao.Text;
+                    KhoaHocService.KhoaHoc_Insert(dt);
                     MessageBox.Show("Thêm thành công!!!", "Thông báo");
                 }
                 else
                 {
-                    tbl_ChiDoan dt = new tbl_ChiDoan();
-                    dt.MaChiDoan = txtmachidoan.Text;
-                    dt.TenChiDoan = txttenchidoan.Text;
-                    dt.MaKhoaHoc = cbbmakhoahoc.SelectedValue.ToString();
-                    ChiDoanService.ChiDoan_Update(dt);
+                    tbl_KhoaHoc dt = new tbl_KhoaHoc();
+                    dt.MaKhoaHoc = txtmakh.Text;
+                    dt.ThoiGianDaoTao = txttgdaotao.Text;
+                    KhoaHocService.KhoaHoc_Update(dt);
                     MessageBox.Show("Sửa thành công!!!", "Thông báo");
                 }
             }
             LoadDataOnGriview();
-        }
-
-        private void btnxoa_Click(object sender, EventArgs e)
-        {
-            DialogResult h = MessageBox.Show("Bạn có chắc muốn xoá không? ", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (h == DialogResult.Yes)
-            {
-                tbl_ChiDoan dt = new tbl_ChiDoan();
-                dt.MaChiDoan = dtgrvchidoan.CurrentRow.Cells["MaChiDoan"].Value.ToString();
-                ChiDoanService.ChiDoan_Delete(dt);
-                LoadDataOnGriview();
-            }
         }
 
         private void btnhuy_Click(object sender, EventArgs e)
@@ -158,12 +141,12 @@ namespace QuanLiDoanVien
         private void txtsearch_TextChanged(object sender, EventArgs e)
         {
             string textsearch = ConvertToUnSign(txtsearch.Text.ToLower());
-            List<tbl_ChiDoan> lst = new List<tbl_ChiDoan>();
-            lst = ChiDoanService.ChiDoanGetByTop("", "", "");
+            List<tbl_KhoaHoc> lst = new List<tbl_KhoaHoc>();
+            lst = KhoaHocService.KhoaHocGetByTop("", "", "");
             var v = (from p in lst
-                     where ConvertToUnSign(p.TenChiDoan.ToLower()).Contains(textsearch)
+                     where ConvertToUnSign(p.ThoiGianDaoTao.ToLower()).Contains(textsearch)
                      select p).ToList();
-            dtgrvchidoan.DataSource = v;
+            dtgrvKhoahoc.DataSource = v;
         }
     }
 }

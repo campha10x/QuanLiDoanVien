@@ -76,8 +76,8 @@ namespace QuanLiDoanVien
                     return;
                 }
             //-------------------------Clear Tab Before---------------
-            if (tabMain.Tabs.Count > 1)
-                tabMain.Tabs.RemoveAt(1);
+            //if (tabMain.Tabs.Count > 1)
+            //    tabMain.Tabs.RemoveAt(1);
 
             TabControlPanel newTabPanel = new DevComponents.DotNetBar.TabControlPanel();
             TabItem newTabPage = new TabItem(this.components);
@@ -168,6 +168,40 @@ namespace QuanLiDoanVien
         {
             UC_QuanLiPhiDoan ucQuanLiPhiDoan = new UC_QuanLiPhiDoan();
             addNewTab("Quản lí phí đoàn viên", ucQuanLiPhiDoan);
+        }
+
+        private void buttonItem21_Click(object sender, EventArgs e)
+        {
+            frmKhoaHoc frm = new frmKhoaHoc();
+            frm.Show();
+        }
+
+        private void buttonItem20_Click(object sender, EventArgs e)
+        {
+            frmChiDoan frm = new frmChiDoan();
+            frm.Show();
+        }
+
+        private void buttonItem21_Click_1(object sender, EventArgs e)
+        {
+
+            frmKhoaHoc frm = new frmKhoaHoc();
+            frm.Show();
+        }
+
+        private void buttonItem20_Click_1(object sender, EventArgs e)
+        {
+            frmChiDoan frm = new frmChiDoan();
+            frm.Show();
+        }
+
+        private void buttonItem16_Click(object sender, EventArgs e)
+        {
+            DialogResult exit = MessageBox.Show("Bạn chắc muốn thoát không!", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (exit == DialogResult.Yes)
+                this.Close();
+            frmLogin frm = new frmLogin();
+            frm.Show();
         }
     }
 }

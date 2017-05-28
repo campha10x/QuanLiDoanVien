@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSinhVien));
             this.lblmasv = new DevComponents.DotNetBar.LabelX();
             this.txthoten = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
@@ -350,24 +351,26 @@
             // 
             this.btndongy.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btndongy.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btndongy.Image = ((System.Drawing.Image)(resources.GetObject("btndongy.Image")));
             this.btndongy.Location = new System.Drawing.Point(255, 299);
             this.btndongy.Name = "btndongy";
             this.btndongy.Size = new System.Drawing.Size(75, 49);
             this.btndongy.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btndongy.TabIndex = 27;
-            this.btndongy.Text = "Đồng ý";
+            this.btndongy.Text = "&Đồng ý";
             this.btndongy.Click += new System.EventHandler(this.btndongy_Click);
             // 
             // buttonX2
             // 
             this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX2.Image = ((System.Drawing.Image)(resources.GetObject("buttonX2.Image")));
             this.buttonX2.Location = new System.Drawing.Point(345, 299);
             this.buttonX2.Name = "buttonX2";
             this.buttonX2.Size = new System.Drawing.Size(75, 49);
             this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.buttonX2.TabIndex = 28;
-            this.buttonX2.Text = "Thoát";
+            this.buttonX2.Text = "&Thoát";
             // 
             // txtmasv
             // 

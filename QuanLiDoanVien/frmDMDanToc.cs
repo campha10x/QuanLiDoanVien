@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuanLiDoanVien.Entity;
 using QuanLiDoanVien.BUS;
+using System.Text.RegularExpressions;
+
 namespace QuanLiDoanVien
 {
     public partial class frmDMDanToc : DevComponents.DotNetBar.Office2007Form
@@ -114,6 +116,72 @@ namespace QuanLiDoanVien
             DialogResult h = MessageBox.Show("Bạn chắc muốn thoát không?","Thông báo",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
             if (h == DialogResult.Yes)
                 this.Close();
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtmadt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtgrvDanToc_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txttendt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        public static string ConvertToUnSign(string text)
+        {
+            for (int i = 33; i < 48; i++)
+            {
+                text = text.Replace(((char)i).ToString(), "");
+            }
+
+            for (int i = 58; i < 65; i++)
+            {
+                text = text.Replace(((char)i).ToString(), "");
+            }
+
+            for (int i = 91; i < 97; i++)
+            {
+                text = text.Replace(((char)i).ToString(), "");
+            }
+            for (int i = 123; i < 127; i++)
+            {
+                text = text.Replace(((char)i).ToString(), "");
+            }
+            text = text.Replace(" ", "-");
+            Regex regex = new Regex(@"\p{IsCombiningDiacriticalMarks}+");
+            string strFormD = text.Normalize(System.Text.NormalizationForm.FormD);
+            return regex.Replace(strFormD, String.Empty).Replace('\u0111', 'd').Replace('\u0110', 'D');
+        }
+      
+        private void txtsearch_TextChanged(object sender, EventArgs e)
+        {
+            string textsearch = ConvertToUnSign(txtsearch.Text.ToLower());
+            List<tbl_DanToc> lst = new List<tbl_DanToc>();
+            lst = DanTocService.DanToc_GetByTop("", "", "");
+            var v = (from p in lst
+                     where ConvertToUnSign(p.TenDT.ToLower()).Contains(textsearch)
+                     select p).ToList();
+            dtgrvDanToc.DataSource = v;
         }
     }
 }

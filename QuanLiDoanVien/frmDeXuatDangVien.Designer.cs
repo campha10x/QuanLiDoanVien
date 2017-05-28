@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDeXuatDangVien));
             this.dtgrvSinhVien = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.masv = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,6 +45,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtsearch = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.btnHome = new System.Windows.Forms.Button();
+            this.btnin = new DevComponents.DotNetBar.ButtonX();
             ((System.ComponentModel.ISupportInitialize)(this.dtgrvSinhVien)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,20 +66,21 @@
             this.madt,
             this.macd,
             this.TinhTrangNopPhi});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgrvSinhVien.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dtgrvSinhVien.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dtgrvSinhVien.Location = new System.Drawing.Point(3, 83);
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgrvSinhVien.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dtgrvSinhVien.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.dtgrvSinhVien.Location = new System.Drawing.Point(4, 102);
+            this.dtgrvSinhVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtgrvSinhVien.Name = "dtgrvSinhVien";
             this.dtgrvSinhVien.ReadOnly = true;
             this.dtgrvSinhVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgrvSinhVien.Size = new System.Drawing.Size(908, 408);
+            this.dtgrvSinhVien.Size = new System.Drawing.Size(933, 502);
             this.dtgrvSinhVien.TabIndex = 2;
             // 
             // masv
@@ -163,64 +165,89 @@
             // buttonX2
             // 
             this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonX2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.buttonX2.Image = ((System.Drawing.Image)(resources.GetObject("buttonX2.Image")));
-            this.buttonX2.Location = new System.Drawing.Point(737, 38);
+            this.buttonX2.Location = new System.Drawing.Point(699, 49);
+            this.buttonX2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonX2.Name = "buttonX2";
-            this.buttonX2.Size = new System.Drawing.Size(59, 40);
+            this.buttonX2.Size = new System.Drawing.Size(54, 40);
             this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.buttonX2.TabIndex = 12;
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(412, 58);
+            this.label1.Location = new System.Drawing.Point(297, 72);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 13);
+            this.label1.Size = new System.Drawing.Size(124, 17);
             this.label1.TabIndex = 11;
             this.label1.Text = "Tìm kiếm theo tên ";
             // 
             // txtsearch
             // 
-            this.txtsearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtsearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             // 
             // 
             // 
             this.txtsearch.Border.Class = "TextBoxBorder";
             this.txtsearch.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtsearch.Location = new System.Drawing.Point(542, 52);
+            this.txtsearch.Location = new System.Drawing.Point(443, 66);
+            this.txtsearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtsearch.Name = "txtsearch";
-            this.txtsearch.Size = new System.Drawing.Size(179, 23);
+            this.txtsearch.Size = new System.Drawing.Size(239, 23);
             this.txtsearch.TabIndex = 10;
             this.txtsearch.TextChanged += new System.EventHandler(this.txtsearch_TextChanged);
             // 
             // btnHome
             // 
+            this.btnHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
             this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.Location = new System.Drawing.Point(825, 40);
+            this.btnHome.Location = new System.Drawing.Point(837, 49);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(75, 40);
+            this.btnHome.Size = new System.Drawing.Size(79, 40);
             this.btnHome.TabIndex = 13;
             this.btnHome.Text = "Home";
             this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnHome.UseVisualStyleBackColor = true;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
+            // btnin
+            // 
+            this.btnin.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnin.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnin.Image = ((System.Drawing.Image)(resources.GetObject("btnin.Image")));
+            this.btnin.Location = new System.Drawing.Point(764, 49);
+            this.btnin.Name = "btnin";
+            this.btnin.Size = new System.Drawing.Size(66, 40);
+            this.btnin.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnin.TabIndex = 14;
+            this.btnin.Text = "In";
+            this.btnin.Click += new System.EventHandler(this.btnin_Click);
+            // 
             // frmDeXuatDangVien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(912, 492);
+            this.ClientSize = new System.Drawing.Size(950, 606);
+            this.Controls.Add(this.btnin);
             this.Controls.Add(this.btnHome);
             this.Controls.Add(this.buttonX2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtsearch);
             this.Controls.Add(this.dtgrvSinhVien);
+            this.DoubleBuffered = true;
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmDeXuatDangVien";
-            this.Text = "frmDeXuatDangVien";
+            this.Text = "Đề xuất lên đảng viên";
             this.Load += new System.EventHandler(this.frmDeXuatDangVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgrvSinhVien)).EndInit();
             this.ResumeLayout(false);
@@ -245,5 +272,6 @@
         private System.Windows.Forms.Label label1;
         private DevComponents.DotNetBar.Controls.TextBoxX txtsearch;
         private System.Windows.Forms.Button btnHome;
+        private DevComponents.DotNetBar.ButtonX btnin;
     }
 }

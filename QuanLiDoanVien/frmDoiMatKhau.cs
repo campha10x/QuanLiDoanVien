@@ -11,7 +11,7 @@ using QuanLiDoanVien.Entity;
 namespace QuanLiDoanVien
 {
   
-    public partial class frmDoiMatKhau : Form
+    public partial class frmDoiMatKhau : DevComponents.DotNetBar.Office2007Form
     {
         public  string ID_User;
         //public string UserName;

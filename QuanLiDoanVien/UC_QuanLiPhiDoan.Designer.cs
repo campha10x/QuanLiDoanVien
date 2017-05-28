@@ -29,8 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_QuanLiPhiDoan));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.nmrudPhidoan = new System.Windows.Forms.NumericUpDown();
+            this.nmrudNam = new System.Windows.Forms.NumericUpDown();
             this.labelX5 = new DevComponents.DotNetBar.LabelX();
             this.cbbmasv = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
@@ -45,8 +47,6 @@
             this.btnsua = new DevComponents.DotNetBar.ButtonX();
             this.btnthem = new DevComponents.DotNetBar.ButtonX();
             this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
-            this.nmrudNam = new System.Windows.Forms.NumericUpDown();
-            this.nmrudPhidoan = new System.Windows.Forms.NumericUpDown();
             this.dtgrvPhiDoan = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nam = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,9 +56,9 @@
             this.txtsearch = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX6 = new DevComponents.DotNetBar.LabelX();
             this.groupBox1.SuspendLayout();
-            this.panelEx1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nmrudNam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmrudPhidoan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmrudNam)).BeginInit();
+            this.panelEx1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgrvPhiDoan)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,7 +77,51 @@
             this.groupBox1.Size = new System.Drawing.Size(302, 325);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông tin hoạt động đoàn";
+            this.groupBox1.Text = "Thông tin phí đoàn viên";
+            // 
+            // nmrudPhidoan
+            // 
+            this.nmrudPhidoan.Location = new System.Drawing.Point(121, 210);
+            this.nmrudPhidoan.Maximum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
+            this.nmrudPhidoan.Minimum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.nmrudPhidoan.Name = "nmrudPhidoan";
+            this.nmrudPhidoan.Size = new System.Drawing.Size(158, 23);
+            this.nmrudPhidoan.TabIndex = 11;
+            this.nmrudPhidoan.Value = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            // 
+            // nmrudNam
+            // 
+            this.nmrudNam.Location = new System.Drawing.Point(121, 99);
+            this.nmrudNam.Maximum = new decimal(new int[] {
+            2100,
+            0,
+            0,
+            0});
+            this.nmrudNam.Minimum = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            this.nmrudNam.Name = "nmrudNam";
+            this.nmrudNam.Size = new System.Drawing.Size(158, 23);
+            this.nmrudNam.TabIndex = 10;
+            this.nmrudNam.Value = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
             // 
             // labelX5
             // 
@@ -165,7 +209,7 @@
             this.btnin.Size = new System.Drawing.Size(66, 29);
             this.btnin.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnin.TabIndex = 15;
-            this.btnin.Text = "In";
+            this.btnin.Text = "&In";
             this.btnin.Click += new System.EventHandler(this.btnin_Click);
             // 
             // btnhome
@@ -178,7 +222,7 @@
             this.btnhome.Size = new System.Drawing.Size(65, 29);
             this.btnhome.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnhome.TabIndex = 14;
-            this.btnhome.Text = "Home";
+            this.btnhome.Text = "&Home";
             // 
             // btnhuy
             // 
@@ -190,7 +234,7 @@
             this.btnhuy.Size = new System.Drawing.Size(71, 29);
             this.btnhuy.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnhuy.TabIndex = 13;
-            this.btnhuy.Text = "Hủy";
+            this.btnhuy.Text = "&Hủy";
             this.btnhuy.Click += new System.EventHandler(this.btnhuy_Click);
             // 
             // btnluu
@@ -203,7 +247,7 @@
             this.btnluu.Size = new System.Drawing.Size(60, 29);
             this.btnluu.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnluu.TabIndex = 12;
-            this.btnluu.Text = "Lưu";
+            this.btnluu.Text = "&Lưu";
             this.btnluu.Click += new System.EventHandler(this.btnluu_Click);
             // 
             // btndelete
@@ -216,7 +260,7 @@
             this.btndelete.Size = new System.Drawing.Size(66, 29);
             this.btndelete.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btndelete.TabIndex = 11;
-            this.btndelete.Text = "Xóa";
+            this.btndelete.Text = "&Xóa";
             this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
             // 
             // btnsua
@@ -229,7 +273,7 @@
             this.btnsua.Size = new System.Drawing.Size(68, 29);
             this.btnsua.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnsua.TabIndex = 10;
-            this.btnsua.Text = "Sửa";
+            this.btnsua.Text = "&Sửa";
             this.btnsua.Click += new System.EventHandler(this.btnsua_Click);
             // 
             // btnthem
@@ -242,7 +286,7 @@
             this.btnthem.Size = new System.Drawing.Size(75, 29);
             this.btnthem.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnthem.TabIndex = 9;
-            this.btnthem.Text = "Thêm";
+            this.btnthem.Text = "&Thêm";
             this.btnthem.Click += new System.EventHandler(this.btnthem_Click);
             // 
             // panelEx1
@@ -271,50 +315,6 @@
             this.panelEx1.Style.GradientAngle = 90;
             this.panelEx1.TabIndex = 16;
             // 
-            // nmrudNam
-            // 
-            this.nmrudNam.Location = new System.Drawing.Point(121, 99);
-            this.nmrudNam.Maximum = new decimal(new int[] {
-            2100,
-            0,
-            0,
-            0});
-            this.nmrudNam.Minimum = new decimal(new int[] {
-            2000,
-            0,
-            0,
-            0});
-            this.nmrudNam.Name = "nmrudNam";
-            this.nmrudNam.Size = new System.Drawing.Size(158, 23);
-            this.nmrudNam.TabIndex = 10;
-            this.nmrudNam.Value = new decimal(new int[] {
-            2000,
-            0,
-            0,
-            0});
-            // 
-            // nmrudPhidoan
-            // 
-            this.nmrudPhidoan.Location = new System.Drawing.Point(121, 210);
-            this.nmrudPhidoan.Maximum = new decimal(new int[] {
-            1000000000,
-            0,
-            0,
-            0});
-            this.nmrudPhidoan.Minimum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.nmrudPhidoan.Name = "nmrudPhidoan";
-            this.nmrudPhidoan.Size = new System.Drawing.Size(158, 23);
-            this.nmrudPhidoan.TabIndex = 11;
-            this.nmrudPhidoan.Value = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            // 
             // dtgrvPhiDoan
             // 
             this.dtgrvPhiDoan.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -326,14 +326,14 @@
             this.Nam,
             this.MaSV,
             this.PhiDoan});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgrvPhiDoan.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgrvPhiDoan.DefaultCellStyle = dataGridViewCellStyle1;
             this.dtgrvPhiDoan.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
             this.dtgrvPhiDoan.Location = new System.Drawing.Point(315, 56);
             this.dtgrvPhiDoan.Name = "dtgrvPhiDoan";
@@ -408,11 +408,11 @@
             // 
             this.labelX6.BackgroundStyle.Class = "";
             this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX6.Location = new System.Drawing.Point(437, 26);
+            this.labelX6.Location = new System.Drawing.Point(510, 26);
             this.labelX6.Name = "labelX6";
-            this.labelX6.Size = new System.Drawing.Size(178, 23);
+            this.labelX6.Size = new System.Drawing.Size(105, 23);
             this.labelX6.TabIndex = 18;
-            this.labelX6.Text = "Tìm kiếm theo tên hoạt động";
+            this.labelX6.Text = "Tìm kiếm năm";
             // 
             // UC_QuanLiPhiDoan
             // 
@@ -424,14 +424,14 @@
             this.Controls.Add(this.dtgrvPhiDoan);
             this.Controls.Add(this.panelEx1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UC_QuanLiPhiDoan";
             this.Size = new System.Drawing.Size(905, 504);
             this.Load += new System.EventHandler(this.UC_QuanLiPhiDoan_Load);
             this.groupBox1.ResumeLayout(false);
-            this.panelEx1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.nmrudNam)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmrudPhidoan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmrudNam)).EndInit();
+            this.panelEx1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgrvPhiDoan)).EndInit();
             this.ResumeLayout(false);
 

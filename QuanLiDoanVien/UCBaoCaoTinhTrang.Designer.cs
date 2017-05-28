@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCBaoCaoTinhTrang));
             this.dotNetBarManager1 = new DevComponents.DotNetBar.DotNetBarManager(this.components);
             this.dockSite4 = new DevComponents.DotNetBar.DockSite();
             this.dockSite1 = new DevComponents.DotNetBar.DockSite();
@@ -125,7 +126,7 @@
             this.bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
             this.bar1.TabIndex = 0;
             this.bar1.TabStop = false;
-            this.bar1.Text = "Parameters";
+            this.bar1.Text = "dockContainerItem1";
             // 
             // panelDockContainer1
             // 
@@ -152,23 +153,25 @@
             // 
             this.btnreset.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnreset.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnreset.Location = new System.Drawing.Point(32, 178);
+            this.btnreset.Image = ((System.Drawing.Image)(resources.GetObject("btnreset.Image")));
+            this.btnreset.Location = new System.Drawing.Point(132, 175);
             this.btnreset.Name = "btnreset";
-            this.btnreset.Size = new System.Drawing.Size(75, 23);
+            this.btnreset.Size = new System.Drawing.Size(75, 39);
             this.btnreset.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnreset.TabIndex = 7;
-            this.btnreset.Text = "Reset";
+            this.btnreset.Text = "&Reset";
             // 
             // btnsubmit
             // 
             this.btnsubmit.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnsubmit.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnsubmit.Location = new System.Drawing.Point(113, 178);
+            this.btnsubmit.Image = ((System.Drawing.Image)(resources.GetObject("btnsubmit.Image")));
+            this.btnsubmit.Location = new System.Drawing.Point(31, 175);
             this.btnsubmit.Name = "btnsubmit";
-            this.btnsubmit.Size = new System.Drawing.Size(75, 23);
+            this.btnsubmit.Size = new System.Drawing.Size(75, 39);
             this.btnsubmit.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnsubmit.TabIndex = 6;
-            this.btnsubmit.Text = "Submit";
+            this.btnsubmit.Text = "&Submit";
             this.btnsubmit.Click += new System.EventHandler(this.btnsubmit_Click);
             // 
             // cbbkhoahoc

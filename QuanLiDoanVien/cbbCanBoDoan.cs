@@ -12,7 +12,7 @@ using System.Text.RegularExpressions;
 
 namespace QuanLiDoanVien
 {
-    public partial class cbbCanBoDoan : Form
+    public partial class cbbCanBoDoan : DevComponents.DotNetBar.Office2007Form
     {
         public delegate void Send_MaCB(string value1);
         public Send_MaCB send;
@@ -74,6 +74,11 @@ namespace QuanLiDoanVien
                 send(MaCB);
                 this.Hide();
             }
+        }
+
+        private void buttonX2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

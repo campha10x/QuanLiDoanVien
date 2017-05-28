@@ -14,5 +14,18 @@ namespace QuanLiDoanVien.BUS
         {
             return cmb.KhoaHocGetByTop(Top, Where, Order);
         }
+        public static bool KhoaHoc_Insert(tbl_KhoaHoc data)
+        {
+            return cmb.KhoaHoc_Insert(data);
+        }
+
+        public static bool KhoaHoc_Update(tbl_KhoaHoc data)
+        {
+            return cmb.KhoaHoc_Update(data);
+        }
+        public static bool KhoaHoc_Delete(tbl_KhoaHoc data)
+        {
+            return cmb.KhoaHoc_Delete(data);
+        }
     }
 }

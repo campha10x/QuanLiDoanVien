@@ -33,5 +33,61 @@ namespace QuanLiDoanVien.DAL
             }
             return list;
         }
+        public bool KhoaHoc_Insert(tbl_KhoaHoc data)
+        {
+            try
+            {
+                using (SqlCommand dbCmd = new SqlCommand("sp_KhoaHoc_Insert", GetConection()))
+                {
+                    dbCmd.CommandType = CommandType.StoredProcedure;
+                    dbCmd.Parameters.Add("@ThoiGianDaoTao", data.ThoiGianDaoTao);
+                    dbCmd.ExecuteNonQuery();
+
+                }
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        public bool KhoaHoc_Update(tbl_KhoaHoc data)
+        {
+            try
+            {
+                using (SqlCommand dbCmd = new SqlCommand("sp_KhoaHoc_Update", GetConection()))
+                {
+                    dbCmd.CommandType = CommandType.StoredProcedure;
+                    dbCmd.Parameters.Add("@MaKhoaHoc", data.MaKhoaHoc);
+                    dbCmd.Parameters.Add("@ThoiGianDaoTao", data.ThoiGianDaoTao);
+                    dbCmd.ExecuteNonQuery();
+
+                }
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public bool KhoaHoc_Delete(tbl_KhoaHoc data)
+        {
+            try
+            {
+                using (SqlCommand dbCmd = new SqlCommand("sp_KhoaHoc_Delete", GetConection()))
+                {
+                    dbCmd.CommandType = CommandType.StoredProcedure;
+                    dbCmd.Parameters.Add("@MaKhoaHoc", data.MaKhoaHoc);
+                    dbCmd.ExecuteNonQuery();
+
+                }
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }
