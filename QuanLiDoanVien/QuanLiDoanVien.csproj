@@ -375,6 +375,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Image\18789747_454862914866944_645836095_o.jpg" />
     <Content Include="Image\huy-hieu-doan-chinh-thuc_1.jpg" />
     <Content Include="Image\logo.jpg" />
   </ItemGroup>
